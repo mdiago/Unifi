@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{09B05188-D658-4519-98EF-A86E0A8E6492}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Unifi</RootNamespace>
+    <AssemblyName>Unifi</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\AccountIdentification4Choice.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\AccountSchemeName1Choice.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\ActiveOrHistoricCurrencyAndAmount.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\AddressType2Code.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\AddressType3Choice.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\AmendmentInformationDetails13.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\Authorisation1Choice.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\Authorisation1Code.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\BranchAndFinancialInstitutionIdentification6.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\BranchData3.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\CashAccount38.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\CashAccountType2Choice.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\CategoryPurpose1Choice.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\ChargeBearerType1Code.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\ClearingSystemIdentification2Choice.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\ClearingSystemMemberIdentification2.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\Contact4.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\CreditDebitCode.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\CreditorReferenceInformation2.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\CreditorReferenceType1Choice.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\CreditorReferenceType2.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\DateAndPlaceOfBirth1.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\DatePeriod2.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\DirectDebitTransaction10.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\DirectDebitTransactionInformation23.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\DiscountAmountAndType1.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\DiscountAmountType1Choice.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\Document.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\DocumentAdjustment1.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\DocumentLineIdentification1.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\DocumentLineInformation1.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\DocumentLineType1.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\DocumentLineType1Choice.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\DocumentType3Code.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\DocumentType6Code.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\FinancialIdentificationSchemeName1Choice.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\FinancialInstitutionIdentification18.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\Frequency36Choice.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\Frequency6Code.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\FrequencyAndMoment1.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\FrequencyPeriod1.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\Garnishment3.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\GarnishmentType1.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\GarnishmentType1Choice.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\GenericAccountIdentification1.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\GenericFinancialIdentification1.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\GenericIdentification30.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\GenericOrganisationIdentification1.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\GenericPersonIdentification1.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\GroupHeader83.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\CustomerDirectDebitInitiationV08.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\ItemChoiceType.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\ItemChoiceType1.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\ItemChoiceType10.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\ItemChoiceType11.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\ItemChoiceType12.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\ItemChoiceType13.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\ItemChoiceType14.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\ItemChoiceType15.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\ItemChoiceType2.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\ItemChoiceType3.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\ItemChoiceType4.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\ItemChoiceType5.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\ItemChoiceType6.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\ItemChoiceType7.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\ItemChoiceType8.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\ItemChoiceType9.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\LocalInstrument2Choice.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\MandateRelatedInformation14.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\MandateSetupReason1Choice.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\NameAndAddress16.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\NamePrefix2Code.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\OrganisationIdentification29.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\OrganisationIdentificationSchemeName1Choice.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\OtherContact1.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\Party38Choice.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\PartyIdentification135.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\PaymentIdentification6.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\PaymentInstruction29.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\PaymentMethod2Code.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\PaymentTypeInformation29.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\PersonIdentification13.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\PersonIdentificationSchemeName1Choice.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\PostalAddress24.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\PreferredContactMethod1Code.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\Priority2Code.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\ProxyAccountIdentification1.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\ProxyAccountType1Choice.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\Purpose2Choice.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\ReferredDocumentInformation7.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\ReferredDocumentType3Choice.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\ReferredDocumentType4.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\RegulatoryAuthority2.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\RegulatoryReporting3.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\RegulatoryReportingType1Code.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\RemittanceAmount2.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\RemittanceAmount3.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\RemittanceInformation16.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\RemittanceLocation7.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\RemittanceLocationData1.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\RemittanceLocationMethod2Code.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\SequenceType3Code.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\ServiceLevel8Choice.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\StructuredRegulatoryReporting3.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\StructuredRemittanceInformation16.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\SupplementaryData1.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\TaxAmount2.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\TaxAmountAndType1.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\TaxAmountType1Choice.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\TaxAuthorisation1.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\TaxInformation7.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\TaxInformation8.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\TaxParty1.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\TaxParty2.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\TaxPeriod2.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\TaxRecord2.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\TaxRecordDetails2.cs" />
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\TaxRecordPeriod1Code.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Doc\Help\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Doc\Specs\Pain\ISO20022_MDRPart1_PaymentsInitiation_2018_2019_v1.docx" />
+    <None Include="Doc\Specs\Pain\ISO20022_MDRPart2_PaymentsInitiation_2018_2019_v1.pdf" />
+    <None Include="Doc\Specs\Pain\ISO20022_MDRPart3_PaymentsInitiation_2018_2019_v1.xlsx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
