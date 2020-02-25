@@ -47,8 +47,8 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV08
     /// Period of time details related to the tax payment.
     /// </summary>
     [Serializable()]
-    [XmlType(Namespace = "urn:iso:std:iso:20022:tech:xsd:pain.008.001.08")]
-    public partial class TaxPeriod2
+    [XmlType(Namespace = AaNamespaces.Root)]
+    public class TaxPeriod2
     {
 
 

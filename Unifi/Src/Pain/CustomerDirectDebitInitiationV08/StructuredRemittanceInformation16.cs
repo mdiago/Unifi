@@ -49,8 +49,8 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV08
     /// structured form.
     /// </summary>
     [Serializable()]
-    [XmlType(Namespace = "urn:iso:std:iso:20022:tech:xsd:pain.008.001.08")]
-    public partial class StructuredRemittanceInformation16
+    [XmlType(Namespace = AaNamespaces.Root)]
+    public class StructuredRemittanceInformation16
     {
 
         /// <summary>

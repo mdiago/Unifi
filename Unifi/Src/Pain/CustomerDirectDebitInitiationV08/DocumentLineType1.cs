@@ -47,8 +47,8 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV08
     /// Specifies the document line type as published in an external document type code list.
     /// </summary>
     [Serializable()]
-    [XmlType(Namespace = "urn:iso:std:iso:20022:tech:xsd:pain.008.001.08")]
-    public partial class DocumentLineType1
+    [XmlType(Namespace = AaNamespaces.Root)]
+    public class DocumentLineType1
     {
 
         /// <summary>

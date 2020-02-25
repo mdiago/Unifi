@@ -43,8 +43,8 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV08
 {
 
     [Serializable()]
-    [XmlType(Namespace = "urn:iso:std:iso:20022:tech:xsd:pain.008.001.08")]
-    public partial class DocumentLineType1Choice
+    [XmlType(Namespace = AaNamespaces.Root)]
+    public class DocumentLineType1Choice
     {
 
         [XmlElement("Cd", typeof(string))]

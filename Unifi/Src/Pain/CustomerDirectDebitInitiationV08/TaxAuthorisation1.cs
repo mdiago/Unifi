@@ -47,8 +47,8 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV08
     /// Details of the authorised tax paying party.
     /// </summary>
     [Serializable()]
-    [XmlType(Namespace = "urn:iso:std:iso:20022:tech:xsd:pain.008.001.08")]
-    public partial class TaxAuthorisation1
+    [XmlType(Namespace = AaNamespaces.Root)]
+    public class TaxAuthorisation1
     {
 
         /// <summary>

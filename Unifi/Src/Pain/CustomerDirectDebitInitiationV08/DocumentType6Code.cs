@@ -47,7 +47,7 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV08
     /// Document type in a coded form.
     /// </summary>
     [Serializable()]
-    [XmlType(Namespace = "urn:iso:std:iso:20022:tech:xsd:pain.008.001.08")]
+    [XmlType(Namespace = AaNamespaces.Root)]
     public enum DocumentType6Code
     {
 

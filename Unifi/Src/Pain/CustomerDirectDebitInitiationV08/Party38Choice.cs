@@ -47,8 +47,8 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV08
     /// Unique and unambiguous way to identify an organisation.
     /// </summary>
     [Serializable()]
-    [XmlType(Namespace = "urn:iso:std:iso:20022:tech:xsd:pain.008.001.08")]
-    public partial class Party38Choice
+    [XmlType(Namespace = AaNamespaces.Root)]
+    public class Party38Choice
     {
 
         /// <remarks/>

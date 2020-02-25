@@ -47,8 +47,8 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV08
     /// Provides remittance information about a payment for garnishment-related purposes.
     /// </summary>
     [Serializable()]
-    [XmlType(Namespace = "urn:iso:std:iso:20022:tech:xsd:pain.008.001.08")]
-    public partial class Garnishment3
+    [XmlType(Namespace = AaNamespaces.Root)]
+    public class Garnishment3
     {
 
         /// <summary>

@@ -37,23 +37,17 @@
     address: info@irenesolutions.com
  */
 
-using System;
-using System.Xml.Serialization;
-
 namespace Unifi.Pain.CustomerDirectDebitInitiationV08
 {
-    [Serializable()]
-    [XmlType(Namespace = AaNamespaces.Root)]
-    public class AccountSchemeName1Choice
+
+    /// <summary>
+    /// Espacios de nombres.
+    /// </summary>
+    public class AaNamespaces
     {
 
-        [XmlElement("Cd", typeof(string))]
-        [XmlElement("Prtry", typeof(string))]
-        [XmlChoiceIdentifier("ItemElementName")]
-        public string Item { get; set; }
-
-        [XmlIgnore()]
-        public ItemChoiceType7 ItemElementName { get; set; }
+        //internal const string Root = "urn:iso:std:iso:20022:tech:xsd:pain.008.001.08";
+        internal const string Root = "urn:iso:std:iso:20022:tech:xsd:pain.008.001.02";
 
     }
 }

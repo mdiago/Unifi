@@ -47,8 +47,8 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV08
     /// Date and place of birth of a person.
     /// </summary>
     [Serializable()]
-    [XmlType(Namespace = "urn:iso:std:iso:20022:tech:xsd:pain.008.001.08")]
-    public partial class DateAndPlaceOfBirth1
+    [XmlType(Namespace = AaNamespaces.Root)]
+    public class DateAndPlaceOfBirth1
     {
 
         /// <summary>

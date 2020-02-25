@@ -49,8 +49,8 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV08
     /// document.
     /// </summary>
     [Serializable()]
-    [XmlType(Namespace = "urn:iso:std:iso:20022:tech:xsd:pain.008.001.08")]
-    public partial class RemittanceAmount2
+    [XmlType(Namespace = AaNamespaces.Root)]
+    public class RemittanceAmount2
     {
 
         /// <summary>

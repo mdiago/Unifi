@@ -47,8 +47,8 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV08
     /// Contact details in another form.
     /// </summary>
     [Serializable()]
-    [XmlType(Namespace = "urn:iso:std:iso:20022:tech:xsd:pain.008.001.08")]
-    public partial class OtherContact1
+    [XmlType(Namespace = AaNamespaces.Root)]
+    public class OtherContact1
     {
 
         /// <summary>

@@ -47,8 +47,8 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV08
     /// Provides the type details of the referred document.
     /// </summary>
     [Serializable()]
-    [XmlType(Namespace = "urn:iso:std:iso:20022:tech:xsd:pain.008.001.08")]
-    public partial class ReferredDocumentType3Choice
+    [XmlType(Namespace = AaNamespaces.Root)]
+    public class ReferredDocumentType3Choice
     {
 
         [XmlElement("Cd", typeof(DocumentType6Code))]

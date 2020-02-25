@@ -47,8 +47,8 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV08
     /// Range of time defined by a start date and an end date.
     /// </summary>
     [Serializable()]
-    [XmlType(Namespace = "urn:iso:std:iso:20022:tech:xsd:pain.008.001.08")]
-    public partial class DatePeriod2
+    [XmlType(Namespace = AaNamespaces.Root)]
+    public class DatePeriod2
     {
 
         /// <summary>

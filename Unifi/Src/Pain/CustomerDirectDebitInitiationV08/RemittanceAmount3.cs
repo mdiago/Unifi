@@ -47,8 +47,8 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV08
     ///  Amount due and payable to the creditor.
     /// </summary>
     [Serializable()]
-    [XmlType(Namespace = "urn:iso:std:iso:20022:tech:xsd:pain.008.001.08")]
-    public partial class RemittanceAmount3
+    [XmlType(Namespace = AaNamespaces.Root)]
+    public class RemittanceAmount3
     {
 
         /// <summary>

@@ -56,8 +56,8 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV08
     /// <para>  - Presentador/ Initiating Party (parte que envía el mensaje)</para>
     /// </summary>
     [Serializable()]
-    [XmlType(Namespace = "urn:iso:std:iso:20022:tech:xsd:pain.008.001.08")]
-    public partial class GroupHeader83
+    [XmlType(Namespace = AaNamespaces.Root)]
+    public class GroupHeader83
     {
 
 

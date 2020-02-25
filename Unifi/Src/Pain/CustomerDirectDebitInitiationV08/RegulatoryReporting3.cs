@@ -44,8 +44,8 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV08
 {
 
     [Serializable()]
-    [XmlType(Namespace = "urn:iso:std:iso:20022:tech:xsd:pain.008.001.08")]
-    public partial class RegulatoryReporting3
+    [XmlType(Namespace = AaNamespaces.Root)]
+    public class RegulatoryReporting3
     {
 
         public RegulatoryReportingType1Code DbtCdtRptgInd { get; set; }

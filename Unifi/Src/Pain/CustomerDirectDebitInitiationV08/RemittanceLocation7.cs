@@ -47,8 +47,8 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV08
     /// Provides information on the remittance advice.
     /// </summary>
     [Serializable()]
-    [XmlType(Namespace = "urn:iso:std:iso:20022:tech:xsd:pain.008.001.08")]
-    public partial class RemittanceLocation7
+    [XmlType(Namespace = AaNamespaces.Root)]
+    public class RemittanceLocation7
     {
 
         /// <summary>

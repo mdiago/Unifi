@@ -47,8 +47,8 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV08
     /// Specifies the type of the amount.
     /// </summary>
     [Serializable()]
-    [XmlType(Namespace = "urn:iso:std:iso:20022:tech:xsd:pain.008.001.08")]
-    public partial class DiscountAmountType1Choice
+    [XmlType(Namespace = AaNamespaces.Root)]
+    public class DiscountAmountType1Choice
     {
 
         /// <summary>

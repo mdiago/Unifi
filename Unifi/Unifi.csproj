@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\AaNamespaces.cs" />
     <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\AccountIdentification4Choice.cs" />
     <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\AccountSchemeName1Choice.cs" />
     <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\ActiveOrHistoricCurrencyAndAmount.cs" />
@@ -160,6 +161,7 @@
     <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\TaxRecord2.cs" />
     <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\TaxRecordDetails2.cs" />
     <Compile Include="Src\Pain\CustomerDirectDebitInitiationV08\TaxRecordPeriod1Code.cs" />
+    <Compile Include="Src\XmlParser.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Doc\Help\" />

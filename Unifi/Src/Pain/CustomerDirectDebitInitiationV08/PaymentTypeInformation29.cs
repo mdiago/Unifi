@@ -44,8 +44,8 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV08
 {
 
     [Serializable()]
-    [XmlType(Namespace = "urn:iso:std:iso:20022:tech:xsd:pain.008.001.08")]
-    public partial class PaymentTypeInformation29
+    [XmlType(Namespace = AaNamespaces.Root)]
+    public class PaymentTypeInformation29
     {
 
         public Priority2Code InstrPrty { get; set; }

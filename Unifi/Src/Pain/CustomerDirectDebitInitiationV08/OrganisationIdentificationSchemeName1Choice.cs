@@ -47,8 +47,8 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV08
     /// Name of the identification scheme.
     /// </summary>
     [Serializable()]
-    [XmlType(Namespace = "urn:iso:std:iso:20022:tech:xsd:pain.008.001.08")]
-    public partial class OrganisationIdentificationSchemeName1Choice
+    [XmlType(Namespace = AaNamespaces.Root)]
+    public class OrganisationIdentificationSchemeName1Choice
     {
 
         /// <remarks/>

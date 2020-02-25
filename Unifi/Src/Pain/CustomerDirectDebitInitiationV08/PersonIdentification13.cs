@@ -47,8 +47,8 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV08
     /// Unique and unambiguous way to identify a person.
     /// </summary>
     [Serializable()]
-    [XmlType(Namespace = "urn:iso:std:iso:20022:tech:xsd:pain.008.001.08")]
-    public partial class PersonIdentification13
+    [XmlType(Namespace = AaNamespaces.Root)]
+    public class PersonIdentification13
     {
 
         /// <summary>

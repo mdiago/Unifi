@@ -48,8 +48,8 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV08
     /// currency is explicit and compliant with ISO 4217.
     /// </summary>
     [Serializable()]
-    [XmlType(Namespace = "urn:iso:std:iso:20022:tech:xsd:pain.008.001.08")]
-    public partial class ActiveOrHistoricCurrencyAndAmount
+    [XmlType(Namespace = AaNamespaces.Root)]
+    public class ActiveOrHistoricCurrencyAndAmount
     {
 
         /// <summary>

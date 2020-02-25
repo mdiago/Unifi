@@ -48,8 +48,8 @@ using System.Xml.Serialization;
 namespace Unifi.Pain.CustomerDirectDebitInitiationV08
 {
     [Serializable()]
-    [XmlType(Namespace = "urn:iso:std:iso:20022:tech:xsd:pain.008.001.08")]
-    public partial class SupplementaryData1
+    [XmlType(Namespace = AaNamespaces.Root)]
+    public class SupplementaryData1
     {     
 
         /// <remarks/>

@@ -47,8 +47,8 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV08
     /// Specifies detailed information on the amount and reason of the document adjustment.
     /// </summary>
     [Serializable()]
-    [XmlType(Namespace = "urn:iso:std:iso:20022:tech:xsd:pain.008.001.08")]
-    public partial class DocumentAdjustment1
+    [XmlType(Namespace = AaNamespaces.Root)]
+    public class DocumentAdjustment1
     {
 
         /// <summary>

@@ -48,8 +48,8 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV08
     /// payment is intended to settle, such as commercial invoices in an accounts' receivable system.
     /// </summary>
     [Serializable()]
-    [XmlType(Namespace = "urn:iso:std:iso:20022:tech:xsd:pain.008.001.08")]
-    public partial class RemittanceInformation16
+    [XmlType(Namespace = AaNamespaces.Root)]
+    public class RemittanceInformation16
     {
 
         /// <summary>

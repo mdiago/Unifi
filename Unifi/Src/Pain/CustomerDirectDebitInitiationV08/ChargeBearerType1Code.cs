@@ -47,7 +47,7 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV08
     /// Specifies which party(ies) will pay charges due for processing of the instruction.
     /// </summary>
     [Serializable()]
-    [XmlType(Namespace = "urn:iso:std:iso:20022:tech:xsd:pain.008.001.08")]
+    [XmlType(Namespace = AaNamespaces.Root)]
     public enum ChargeBearerType1Code
     {
 

@@ -47,8 +47,8 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV08
     /// Coded or proprietary format creditor reference type.
     /// </summary>
     [Serializable()]
-    [XmlType(Namespace = "urn:iso:std:iso:20022:tech:xsd:pain.008.001.08")]
-    public partial class CreditorReferenceType1Choice
+    [XmlType(Namespace = AaNamespaces.Root)]
+    public class CreditorReferenceType1Choice
     {
 
         /// <summary>

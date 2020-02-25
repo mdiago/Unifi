@@ -47,8 +47,8 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV08
     /// Specifies the terms used to formally address a person.
     /// </summary>
     [Serializable()]
-    [XmlType(Namespace = "urn:iso:std:iso:20022:tech:xsd:pain.008.001.08")]
-    public partial class GenericPersonIdentification1
+    [XmlType(Namespace = AaNamespaces.Root)]
+    public class GenericPersonIdentification1
     {
 
         /// <summary>

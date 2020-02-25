@@ -47,8 +47,8 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV08
     /// Information that locates and identifies a specific address, as defined by postal services.
     /// </summary>
     [Serializable()]
-    [XmlType(Namespace = "urn:iso:std:iso:20022:tech:xsd:pain.008.001.08")]
-    public partial class PostalAddress24
+    [XmlType(Namespace = AaNamespaces.Root)]
+    public class PostalAddress24
     {
 
         /// <summary>

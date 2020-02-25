@@ -47,7 +47,7 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV08
     /// Provides the type details of the garnishment.
     /// </summary>
     [Serializable()]
-    [XmlType(Namespace = "urn:iso:std:iso:20022:tech:xsd:pain.008.001.08", IncludeInSchema = false)]
+    [XmlType(Namespace = AaNamespaces.Root, IncludeInSchema = false)]
     public enum ItemChoiceType15
     {
 

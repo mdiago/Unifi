@@ -49,8 +49,8 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV08
     /// pre-defined parameters such as thresholds and type of account.
     /// </summary>
     [Serializable()]
-    [XmlType(Namespace = "urn:iso:std:iso:20022:tech:xsd:pain.008.001.08")]
-    public partial class TaxInformation7
+    [XmlType(Namespace = AaNamespaces.Root)]
+    public class TaxInformation7
     {
 
         /// <summary>

@@ -43,8 +43,8 @@ using System.Xml.Serialization;
 namespace Unifi.Pain.CustomerDirectDebitInitiationV08
 {
     [Serializable()]
-    [XmlType(Namespace = "urn:iso:std:iso:20022:tech:xsd:pain.008.001.08")]
-    public partial class CashAccountType2Choice
+    [XmlType(Namespace = AaNamespaces.Root)]
+    public class CashAccountType2Choice
     {
 
         [XmlElement("Cd", typeof(string))]
@@ -53,7 +53,7 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV08
         public string Item { get; set; }
 
         [XmlIgnore()]
-        public ItemChoiceType8 ItemElementNamem { get; set; }
+        public ItemChoiceType8 ItemElementName { get; set; }
 
     }
 

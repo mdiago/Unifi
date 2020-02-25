@@ -47,8 +47,8 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV08
     /// Specifies the details of the contact person.
     /// </summary>
     [Serializable()]
-    [XmlType(Namespace = "urn:iso:std:iso:20022:tech:xsd:pain.008.001.08")]
-    public partial class Contact4
+    [XmlType(Namespace = AaNamespaces.Root)]
+    public class Contact4
     {
 
         /// <summary>

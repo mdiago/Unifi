@@ -48,8 +48,8 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV08
     /// El mensaje ISO 20022 de iniciación de adeudos directos básicos por el cliente (pain.008.001.08.
     /// </summary>
     [Serializable()]
-    [XmlType(Namespace = "urn:iso:std:iso:20022:tech:xsd:pain.008.001.08")]
-    public partial class CustomerDirectDebitInitiationV08
+    [XmlType(Namespace = AaNamespaces.Root)]
+    public class CustomerDirectDebitInitiationV08
     {
 
 

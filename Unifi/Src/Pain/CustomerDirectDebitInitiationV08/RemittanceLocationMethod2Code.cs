@@ -47,7 +47,7 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV08
     /// Specifies the method used to deliver the remittance advice information.
     /// </summary>
     [Serializable()]
-    [XmlType(Namespace = "urn:iso:std:iso:20022:tech:xsd:pain.008.001.08")]
+    [XmlType(Namespace = AaNamespaces.Root)]
     public enum RemittanceLocationMethod2Code
     {
 

@@ -43,8 +43,8 @@ using System.Xml.Serialization;
 namespace Unifi.Pain.CustomerDirectDebitInitiationV08
 {
     [Serializable()]
-    [XmlType(Namespace = "urn:iso:std:iso:20022:tech:xsd:pain.008.001.08")]
-    public partial class BranchAndFinancialInstitutionIdentification6
+    [XmlType(Namespace = AaNamespaces.Root)]
+    public class BranchAndFinancialInstitutionIdentification6
     {
 
         public FinancialInstitutionIdentification18 FinInstnId { get; set; }

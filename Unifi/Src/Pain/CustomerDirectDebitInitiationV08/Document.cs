@@ -42,17 +42,19 @@ using System.Xml.Serialization;
 
 namespace Unifi.Pain.CustomerDirectDebitInitiationV08
 {
+
+
     [Serializable()]
-    [XmlType(Namespace = "urn:iso:std:iso:20022:tech:xsd:pain.008.001.08")]
-    [XmlRoot(Namespace = "urn:iso:std:iso:20022:tech:xsd:pain.008.001.08", IsNullable = false)]
-    public partial class Document
-    {
+    [XmlType(Namespace = AaNamespaces.Root)]
+    [XmlRoot(Namespace = AaNamespaces.Root, IsNullable = false)]
+    public class Document
+    {        
 
         /// <summary>
         /// <para>MENSAJE DE INICIACIÓN DE ADEUDOS DIRECTOS.</para>
         /// El mensaje ISO 20022 de iniciación de adeudos directos básicos por el cliente (pain.008.001.08.
         /// </summary>
-        public CustomerDirectDebitInitiationV08 cstmrDrctDbtInitnField { get; set; }
+        public CustomerDirectDebitInitiationV08 CstmrDrctDbtInitn { get; set; }
 
         
     }

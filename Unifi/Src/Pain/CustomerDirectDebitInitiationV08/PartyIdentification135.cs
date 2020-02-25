@@ -47,8 +47,8 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV08
     /// Specifies the identification of a person or an organisation.
     /// </summary>
     [Serializable()]
-    [XmlType(Namespace = "urn:iso:std:iso:20022:tech:xsd:pain.008.001.08")]
-    public partial class PartyIdentification135
+    [XmlType(Namespace = AaNamespaces.Root)]
+    public class PartyIdentification135
     {
 
         /// <summary>
