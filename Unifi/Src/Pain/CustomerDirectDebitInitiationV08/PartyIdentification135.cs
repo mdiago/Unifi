@@ -78,6 +78,15 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV08
         /// </summary>
         public Contact4 CtctDtls { get; set; }
 
+        /// <summary>
+        /// Representación textual de la instancia.
+        /// </summary>
+        /// <returns>Representación textual de la instancia.</returns>
+        public override string ToString()
+        {
+            return $"{Nm}";
+        }
+
     }
 
 }

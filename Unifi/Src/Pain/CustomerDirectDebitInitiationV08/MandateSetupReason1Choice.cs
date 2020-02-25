@@ -44,17 +44,7 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV08
 {
     [Serializable()]
     [XmlType(Namespace = AaNamespaces.Root)]
-    public class MandateSetupReason1Choice
+    public class MandateSetupReason1Choice : BaseChoice
     {
-
-
-        [XmlElement("Cd", typeof(string))]
-        [XmlElement("Prtry", typeof(string))]
-        [XmlChoiceIdentifier("ItemElementName")]
-        public string Item { get; set; }
-
-        [XmlIgnore()]
-        public ItemChoiceType10 ItemElementName { get; set; }
-
     }
 }

@@ -44,17 +44,8 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV08
 {
     [Serializable()]
     [XmlType(Namespace = AaNamespaces.Root)]
-    public class CashAccountType2Choice
+    public class CashAccountType2Choice : BaseChoice
     {
-
-        [XmlElement("Cd", typeof(string))]
-        [XmlElement("Prtry", typeof(string))]
-        [XmlChoiceIdentifier("ItemElementName")]
-        public string Item { get; set; }
-
-        [XmlIgnore()]
-        public ItemChoiceType8 ItemElementName { get; set; }
-
     }
 
 }

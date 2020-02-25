@@ -51,5 +51,14 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV08
         [XmlElement("Othr", typeof(GenericAccountIdentification1))]
         public object Item { get; set; }
 
+        /// <summary>
+        /// Representación textual de la instancia.
+        /// </summary>
+        /// <returns>Representación textual de la instancia.</returns>
+        public override string ToString()
+        {
+            return $"{Item}";
+        }
+
     }
 }

@@ -72,7 +72,7 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV08
         public DateTime CreDtTm { get; set; }
 
         /// <summary>
-        /// Número de operaciones
+        /// Autorización
         /// </summary>
         [XmlElement("Authstn")]
         public Authorisation1Choice[] Authstn { get; set; }
@@ -102,5 +102,15 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV08
         /// ForwardingAgent
         /// </summary>
         public BranchAndFinancialInstitutionIdentification6 FwdgAgt { get; set; }
+
+        /// <summary>
+        /// Representación textual de la instancia.
+        /// </summary>
+        /// <returns>Representación textual de la instancia.</returns>
+        public override string ToString()
+        {
+            return $"{MsgId}, {CreDtTm}, {NbOfTxs}";
+        }
+
     }
 }

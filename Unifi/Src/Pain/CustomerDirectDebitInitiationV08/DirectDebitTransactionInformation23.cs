@@ -89,6 +89,15 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV08
         [XmlElement("SplmtryData")]
         public SupplementaryData1[] SplmtryData { get; set; }
 
+        /// <summary>
+        /// Representación textual de la instancia.
+        /// </summary>
+        /// <returns>Representación textual de la instancia.</returns>
+        public override string ToString()
+        {
+            return $"{Dbtr}, {DbtrAcct}, {InstdAmt}";
+        }
+
     }
 
 }

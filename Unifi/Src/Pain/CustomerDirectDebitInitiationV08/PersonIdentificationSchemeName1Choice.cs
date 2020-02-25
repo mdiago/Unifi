@@ -44,22 +44,7 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV08
 {
     [Serializable()]
     [XmlType(Namespace = AaNamespaces.Root)]
-    public class PersonIdentificationSchemeName1Choice
+    public class PersonIdentificationSchemeName1Choice : BaseChoice
     {
-
-        private string itemField;
-
-        private ItemChoiceType1 itemElementNameField;
-
-        /// <remarks/>
-        [XmlElement("Cd", typeof(string))]
-        [XmlElement("Prtry", typeof(string))]
-        [XmlChoiceIdentifier("ItemElementName")]
-        public string Item { get; set; }
-
-        /// <remarks/>
-        [XmlIgnore()]
-        public ItemChoiceType1 ItemElementName { get; set; }
-
     }
 }

@@ -67,5 +67,14 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV08
         [XmlText()]
         public decimal Value { get; set; }
 
+        /// <summary>
+        /// Representación textual de la instancia.
+        /// </summary>
+        /// <returns>Representación textual de la instancia.</returns>
+        public override string ToString()
+        {
+            return $"{Value} {Ccy}";
+        }
+
     }
 }

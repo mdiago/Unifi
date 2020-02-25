@@ -66,7 +66,7 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV08
         public PaymentTypeInformation29 PmtTpInf { get; set; }
 
         [XmlElement(DataType = "date")]
-        public System.DateTime ReqdColltnDt { get; set; }
+        public DateTime ReqdColltnDt { get; set; }
 
         public PartyIdentification135 Cdtr { get; set; }
 
@@ -91,6 +91,15 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV08
 
         [XmlElement("DrctDbtTxInf")]
         public DirectDebitTransactionInformation23[] DrctDbtTxInf { get; set; }
+
+        /// <summary>
+        /// Representación textual de la instancia.
+        /// </summary>
+        /// <returns>Representación textual de la instancia.</returns>
+        public override string ToString()
+        {
+            return $"{PmtInfId}, {PmtMtd}, {PmtTpInf}";
+        }
 
     }
 }

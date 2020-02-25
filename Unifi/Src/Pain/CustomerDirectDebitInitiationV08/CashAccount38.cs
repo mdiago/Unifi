@@ -57,6 +57,15 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV08
 
         public ProxyAccountIdentification1 Prxy { get; set; }
 
+        /// <summary>
+        /// Representación textual de la instancia.
+        /// </summary>
+        /// <returns>Representación textual de la instancia.</returns>
+        public override string ToString()
+        {
+            return $"{Id}, {Tp}, {Nm}";
+        }
+
     }
 
 }

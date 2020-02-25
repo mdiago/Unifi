@@ -46,8 +46,7 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV08
     public class AaNamespaces
     {
 
-        //internal const string Root = "urn:iso:std:iso:20022:tech:xsd:pain.008.001.08";
-        internal const string Root = "urn:iso:std:iso:20022:tech:xsd:pain.008.001.02";
+        internal const string Root = "urn:iso:std:iso:20022:tech:xsd:pain.008.001.08";
 
     }
 }

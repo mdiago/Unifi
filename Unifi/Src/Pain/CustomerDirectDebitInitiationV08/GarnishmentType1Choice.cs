@@ -48,22 +48,8 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV08
     /// </summary>
     [Serializable()]
     [XmlType(Namespace = AaNamespaces.Root)]
-    public class GarnishmentType1Choice
-    {
-
-        /// <summary>
-        /// Provides the type details of the garnishment.
-        /// </summary>
-        [XmlElement("Cd", typeof(string))]
-        [XmlElement("Prtry", typeof(string))]
-        [XmlChoiceIdentifier("ItemElementName")]
-        public string Item { get; set; }
-
-        /// <summary>
-        /// Provides the type details of the garnishment.
-        /// </summary>
-        [XmlIgnore()]
-        public ItemChoiceType15 ItemElementName { get; set; }
+    public class GarnishmentType1Choice : BaseChoice
+    {     
     }
 
 }

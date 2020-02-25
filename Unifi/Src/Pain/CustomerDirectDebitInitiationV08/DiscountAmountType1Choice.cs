@@ -48,23 +48,8 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV08
     /// </summary>
     [Serializable()]
     [XmlType(Namespace = AaNamespaces.Root)]
-    public class DiscountAmountType1Choice
+    public class DiscountAmountType1Choice : BaseChoice
     {
-
-        /// <summary>
-        /// Specifies the amount type, in a coded form.
-        /// </summary>
-        [XmlElement("Cd", typeof(string))]
-        [XmlElement("Prtry", typeof(string))]
-        [XmlChoiceIdentifier("ItemElementName")]
-        public string Item { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [XmlIgnore()]
-        public ItemChoiceType13 ItemElementName { get; set; }
-
     }
 
 }

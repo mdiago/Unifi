@@ -47,17 +47,8 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV08
     /// </summary>
     [Serializable()]
     [XmlType(Namespace = AaNamespaces.Root)]
-    public class TaxAmountType1Choice
-    {
-
-        [XmlElement("Cd", typeof(string))]
-        [XmlElement("Prtry", typeof(string))]
-        [XmlChoiceIdentifier("ItemElementName")]
-        public string Item { get; set; }
-
-        [XmlIgnore()]
-        public ItemChoiceType14 ItemElementName { get; set; }
-
+    public class TaxAmountType1Choice : BaseChoice
+    {   
     }
 
 }
