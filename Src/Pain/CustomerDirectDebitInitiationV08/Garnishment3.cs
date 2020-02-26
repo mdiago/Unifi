@@ -93,14 +93,14 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV08
         public bool FmlyMdclInsrncInd { get; set; }
 
         /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        [XmlIgnore()]
         public bool FmlyMdclInsrncIndSpecified { get; set; }
 
         /// <remarks/>
         public bool MplyeeTermntnInd { get; set; }
 
         /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        [XmlIgnore()]
         public bool MplyeeTermntnIndSpecified { get; set; }
     }
 

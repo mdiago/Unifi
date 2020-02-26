@@ -42,66 +42,19 @@ using System.Xml.Serialization;
 
 namespace Unifi.Pain.CustomerDirectDebitInitiationV02
 {
-
-    /// <summary>
-    /// Provides remittance information about a payment for garnishment-related purposes.
-    /// </summary>
     [Serializable()]
-    [XmlType(Namespace = AaNamespaces.Root)]
-    public class Garnishment3
+    [XmlType(Namespace = AaNamespaces.Root, IncludeInSchema = false)]
+    public enum ItemChoiceType
     {
 
         /// <summary>
-        /// Specifies the type of garnishment.
+        /// Code.
         /// </summary>
-        public GarnishmentType1 Tp { get; set; }
+        Cd,
 
         /// <summary>
-        /// Ultimate party that owes an amount of money to the 
-        /// (ultimate) creditor, in this case, to the garnisher.
+        /// Proprietary.
         /// </summary>
-        public PartyIdentification135 Grnshee { get; set; }
-
-        /// <summary>
-        /// Party on the credit side of the transaction who administers the 
-        /// garnishment on behalf of the ultimate beneficiary.
-        /// </summary>
-        public PartyIdentification135 GrnshmtAdmstr { get; set; }
-
-        /// <summary>
-        /// ReferenceNumber. Reference information that is specific 
-        /// to the agency receiving the garnishment. Max140Text.
-        /// </summary>
-        public string RefNb { get; set; }
-
-        /// <summary>
-        /// Date of payment which garnishment was taken from. ISODate.
-        /// </summary>
-        [XmlElement(DataType = "date")]
-        public DateTime Dt { get; set; }
-
-        /// <summary>
-        /// Indicates if Dt is specified.
-        /// </summary>
-        [XmlIgnore()]
-        public bool DtSpecified { get; set; }
-
-        /// <remarks/>
-        public ActiveOrHistoricCurrencyAndAmount RmtdAmt { get; set; }
-
-        /// <remarks/>
-        public bool FmlyMdclInsrncInd { get; set; }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool FmlyMdclInsrncIndSpecified { get; set; }
-
-        /// <remarks/>
-        public bool MplyeeTermntnInd { get; set; }
-
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool MplyeeTermntnIndSpecified { get; set; }
+        Prtry
     }
-
 }

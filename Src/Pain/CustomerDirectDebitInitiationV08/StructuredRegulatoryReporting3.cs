@@ -47,41 +47,20 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV08
     public class StructuredRegulatoryReporting3
     {
 
-        private string tpField;
-
-        private System.DateTime dtField;
-
-        private bool dtFieldSpecified;
-
-        private string ctryField;
-
-        private string cdField;
-
-        private ActiveOrHistoricCurrencyAndAmount amtField;
-
-        private string[] infField;
-
-        /// <remarks/>
         public string Tp { get; set; }
 
-        /// <remarks/>
         [XmlElement(DataType = "date")]
         public DateTime Dt { get; set; }
 
-        /// <remarks/>
         [XmlIgnore()]
         public bool DtSpecified { get; set; }
 
-        /// <remarks/>
         public string Ctry { get; set; }
 
-        /// <remarks/>
         public string Cd { get; set; }
 
-        /// <remarks/>
         public ActiveOrHistoricCurrencyAndAmount Amt { get; set; }
 
-        /// <remarks/>
         [XmlElement("Inf")]
         public string[] Inf { get; set; }
 
