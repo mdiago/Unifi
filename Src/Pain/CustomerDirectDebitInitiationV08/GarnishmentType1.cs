@@ -39,6 +39,7 @@
  */
 
 using System.Xml.Serialization;
+using Unifi.Pain.CustomerDirectDebitInitiation;
 
 namespace Unifi.Pain.CustomerDirectDebitInitiationV08
 {
@@ -54,7 +55,7 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV08
         /// <summary>
         /// Specifies the type of garnishment.
         /// </summary>
-        public GarnishmentType1Choice CdOrPrtry { get; set; }
+        public CdOrPrtryTypeChoice CdOrPrtry { get; set; }
 
         /// <summary>
         /// Identification of the issuer of the garnishment type.

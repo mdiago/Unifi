@@ -1,12 +1,14 @@
 ﻿using System.Xml.Serialization;
+using Unifi.Pain.CustomerDirectDebitInitiation;
+
 namespace Unifi.Pain.CustomerDirectDebitInitiationV03
 {
     public partial class Party11Choice
     {
 
     
-        [XmlElement("OrgId", typeof(OrganisationIdentification8))]
-        [XmlElement("PrvtId", typeof(PersonIdentification5))]
+        [XmlElement("OrgId", typeof(OrganisationIdentification))]
+        [XmlElement("PrvtId", typeof(PersonIdentification))]
         public object Item { get; set; }
 
     }

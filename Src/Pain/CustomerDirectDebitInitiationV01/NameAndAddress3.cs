@@ -1,6 +1,7 @@
 ﻿using System.Xml.Serialization;
 using System;
 using Unifi.Pain;
+using Unifi.Pain.CustomerDirectDebitInitiation;
 
 namespace Unifi.Pain.CustomerDirectDebitInitiationV01
 {
@@ -11,7 +12,7 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV01
         public string Nm { get; set; }
 
 
-        public PostalAddress1 Adr { get; set; }
+        public PostalAddress Adr { get; set; }
 
     }
 

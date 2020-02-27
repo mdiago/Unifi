@@ -39,6 +39,7 @@
 
 using System;
 using System.Xml.Serialization;
+using Unifi.Pain.CustomerDirectDebitInitiation;
 
 namespace Unifi.Pain.CustomerDirectDebitInitiationV08
 {
@@ -52,8 +53,8 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV08
     {
 
         /// <remarks/>
-        [XmlElement("OrgId", typeof(OrganisationIdentification29))]
-        [XmlElement("PrvtId", typeof(PersonIdentification13))]
+        [XmlElement("OrgId", typeof(OrganisationIdentification))]
+        [XmlElement("PrvtId", typeof(PersonIdentification))]
         public object Item { get; set; }
 
     }

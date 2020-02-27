@@ -39,6 +39,7 @@
 
 using System;
 using System.Xml.Serialization;
+using Unifi.Pain.CustomerDirectDebitInitiation;
 
 namespace Unifi.Pain.CustomerDirectDebitInitiationV08
 {
@@ -47,13 +48,11 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV08
     /// Type of address expressed as a code.
     /// </summary>
     [Serializable()]
-    [XmlType(Namespace = AaNamespaces.Root)]
     public class AddressType3Choice
     {
 
-        /// <remarks/>
-        [XmlElement("Cd", typeof(AddressType2Code))]
-        [XmlElement("Prtry", typeof(GenericIdentification30))]
+        [XmlElement("Cd", typeof(AddressTypeCode))]
+        [XmlElement("Prtry", typeof(GenericIdentificationCdOrPrtry))]
         public object Item { get; set; }
     }
 

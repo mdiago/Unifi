@@ -1,4 +1,5 @@
 ﻿using System.Xml.Serialization;
+using Unifi.Pain.CustomerDirectDebitInitiation;
 
 namespace Unifi.Pain.CustomerDirectDebitInitiationV02
 {
@@ -32,7 +33,7 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV02
 
         public string InstrForCdtrAgt { get; set; }
 
-        public Purpose2Choice Purp { get; set; }   
+        public CdOrPrtryTypeChoice Purp { get; set; }   
 
         [XmlElement("RgltryRptg")]
         public RegulatoryReporting3[] RgltryRptg { get; set; }

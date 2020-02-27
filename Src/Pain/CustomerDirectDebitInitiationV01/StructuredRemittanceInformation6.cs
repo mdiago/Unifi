@@ -1,6 +1,7 @@
 ﻿using System.Xml.Serialization;
 using System;
 using Unifi.Pain;
+using Unifi.Pain.CustomerDirectDebitInitiation;
 
 namespace Unifi.Pain.CustomerDirectDebitInitiationV01
 {
@@ -26,10 +27,10 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV01
         public CreditorReferenceInformation1 CdtrRefInf { get; set; }
 
 
-        public PartyIdentification8 Invcr { get; set; }
+        public PartyIdentification Invcr { get; set; }
 
 
-        public PartyIdentification8 Invcee { get; set; }
+        public PartyIdentification Invcee { get; set; }
 
 
         public string AddtlRmtInf { get; set; }

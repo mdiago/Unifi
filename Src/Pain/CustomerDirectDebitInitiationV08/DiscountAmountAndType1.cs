@@ -39,6 +39,7 @@
 
 using System;
 using System.Xml.Serialization;
+using Unifi.Pain.CustomerDirectDebitInitiation;
 
 namespace Unifi.Pain.CustomerDirectDebitInitiationV08
 {
@@ -54,7 +55,7 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV08
         /// <summary>
         /// Type. Specifies the type of the amount.
         /// </summary>
-        public DiscountAmountType1Choice Tp { get; set; }
+        public CdOrPrtryTypeChoice Tp { get; set; }
 
         /// <summary>
         /// Amount. Amount of money, which has been typed.

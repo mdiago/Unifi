@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Xml.Serialization;
+using Unifi.Pain.CustomerDirectDebitInitiation;
+
 namespace Unifi.Pain.CustomerDirectDebitInitiationV03
 {
     [XmlType(Namespace = "urn:iso:std:iso:20022:tech:xsd:pain.008.001.03")]

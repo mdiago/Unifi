@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Xml.Serialization;
+using Unifi.Pain.CustomerDirectDebitInitiation;
+
 namespace Unifi.Pain.CustomerDirectDebitInitiationV03
 {
     public partial class AmendmentInformationDetails8
@@ -8,13 +10,13 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV03
 
         public string OrgnlMndtId { get; set; }
 
-        public PartyIdentification43 OrgnlCdtrSchmeId { get; set; }
+        public PartyIdentification OrgnlCdtrSchmeId { get; set; }
 
         public BranchAndFinancialInstitutionIdentification5 OrgnlCdtrAgt { get; set; }
 
         public CashAccount24 OrgnlCdtrAgtAcct { get; set; }
 
-        public PartyIdentification43 OrgnlDbtr { get; set; }
+        public PartyIdentification OrgnlDbtr { get; set; }
 
         public CashAccount24 OrgnlDbtrAcct { get; set; }
 

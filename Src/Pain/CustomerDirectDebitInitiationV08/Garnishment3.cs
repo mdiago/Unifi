@@ -39,6 +39,7 @@
 
 using System;
 using System.Xml.Serialization;
+using Unifi.Pain.CustomerDirectDebitInitiation;
 
 namespace Unifi.Pain.CustomerDirectDebitInitiationV08
 {
@@ -60,13 +61,13 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV08
         /// Ultimate party that owes an amount of money to the 
         /// (ultimate) creditor, in this case, to the garnisher.
         /// </summary>
-        public PartyIdentification135 Grnshee { get; set; }
+        public PartyIdentification Grnshee { get; set; }
 
         /// <summary>
         /// Party on the credit side of the transaction who administers the 
         /// garnishment on behalf of the ultimate beneficiary.
         /// </summary>
-        public PartyIdentification135 GrnshmtAdmstr { get; set; }
+        public PartyIdentification GrnshmtAdmstr { get; set; }
 
         /// <summary>
         /// ReferenceNumber. Reference information that is specific 

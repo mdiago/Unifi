@@ -1,6 +1,7 @@
 ﻿using System.Xml.Serialization;
 using System;
 using Unifi.Pain;
+using Unifi.Pain.CustomerDirectDebitInitiation;
 
 namespace Unifi.Pain.CustomerDirectDebitInitiationV01
 {
@@ -9,7 +10,7 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV01
     {
 
 
-        public AccountIdentification3Choice Id { get; set; }
+        public AccountIdentificationChoice Id { get; set; }
 
 
         public CashAccountType2 Tp { get; set; }

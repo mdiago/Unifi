@@ -39,6 +39,7 @@
 
 using System;
 using System.Xml.Serialization;
+using Unifi.Pain.CustomerDirectDebitInitiation;
 
 namespace Unifi.Pain.CustomerDirectDebitInitiationV08
 {
@@ -48,7 +49,7 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV08
     {
 
    
-        public ClearingSystemIdentification2Choice ClrSysId { get; set; }
+        public CdOrPrtryTypeChoice ClrSysId { get; set; }
 
         public string MmbId { get; set; }
 

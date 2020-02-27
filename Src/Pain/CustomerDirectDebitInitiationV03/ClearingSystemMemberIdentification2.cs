@@ -1,9 +1,11 @@
-﻿namespace Unifi.Pain.CustomerDirectDebitInitiationV03
+﻿using Unifi.Pain.CustomerDirectDebitInitiation;
+
+namespace Unifi.Pain.CustomerDirectDebitInitiationV03
 {
     public partial class ClearingSystemMemberIdentification2
     {
 
-        public ClearingSystemIdentification2Choice ClrSysId { get; set; }
+        public CdOrPrtryTypeChoice ClrSysId { get; set; }
 
         public string MmbId { get; set; }
 

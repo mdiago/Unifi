@@ -1,10 +1,12 @@
-﻿namespace Unifi.Pain.CustomerDirectDebitInitiationV03
+﻿using Unifi.Pain.CustomerDirectDebitInitiation;
+
+namespace Unifi.Pain.CustomerDirectDebitInitiationV03
 {
     public partial class DiscountAmountAndType1
     {
 
     
-        public DiscountAmountType1Choice Tp { get; set; }
+        public CdOrPrtryTypeChoice Tp { get; set; }
 
         public ActiveOrHistoricCurrencyAndAmount Amt { get; set; }
 

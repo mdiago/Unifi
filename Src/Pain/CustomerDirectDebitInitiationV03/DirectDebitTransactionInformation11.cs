@@ -1,4 +1,6 @@
 ﻿using System.Xml.Serialization;
+using Unifi.Pain.CustomerDirectDebitInitiation;
+
 namespace Unifi.Pain.CustomerDirectDebitInitiationV03
 {
     [XmlType(Namespace = "urn:iso:std:iso:20022:tech:xsd:pain.008.001.03")]
@@ -19,22 +21,22 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV03
 
         public DirectDebitTransaction7 DrctDbtTx { get; set; }
 
-        public PartyIdentification43 UltmtCdtr { get; set; }
+        public PartyIdentification UltmtCdtr { get; set; }
 
         public BranchAndFinancialInstitutionIdentification5 DbtrAgt { get; set; }
 
         public CashAccount24 DbtrAgtAcct { get; set; }
 
 
-        public PartyIdentification43 Dbtr { get; set; }
+        public PartyIdentification Dbtr { get; set; }
 
         public CashAccount24 DbtrAcct { get; set; }
 
-        public PartyIdentification43 UltmtDbtr { get; set; }
+        public PartyIdentification UltmtDbtr { get; set; }
 
         public string InstrForCdtrAgt { get; set; }
 
-        public Purpose2Choice Purp { get; set; }
+        public CdOrPrtryTypeChoice Purp { get; set; }
 
         [XmlElement("RgltryRptg")]
         public RegulatoryReporting3[] RgltryRptg { get; set; }

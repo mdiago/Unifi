@@ -39,6 +39,7 @@
 
 using System;
 using System.Xml.Serialization;
+using Unifi.Pain.CustomerDirectDebitInitiation;
 
 namespace Unifi.Pain.CustomerDirectDebitInitiationV08
 {
@@ -47,7 +48,7 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV08
     public class ProxyAccountIdentification1
     {
 
-        public ProxyAccountType1Choice Tp { get; set; }
+        public CdOrPrtryTypeChoice Tp { get; set; }
 
         public string Id { get; set; }
 

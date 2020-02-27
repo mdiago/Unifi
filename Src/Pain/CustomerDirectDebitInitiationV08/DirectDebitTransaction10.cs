@@ -39,6 +39,7 @@
 
 using System;
 using System.Xml.Serialization;
+using Unifi.Pain.CustomerDirectDebitInitiation;
 
 namespace Unifi.Pain.CustomerDirectDebitInitiationV08
 {
@@ -49,7 +50,7 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV08
 
         public MandateRelatedInformation14 MndtRltdInf { get; set; }
 
-        public PartyIdentification135 CdtrSchmeId { get; set; }
+        public PartyIdentification CdtrSchmeId { get; set; }
 
         public string PreNtfctnId { get; set; }
 

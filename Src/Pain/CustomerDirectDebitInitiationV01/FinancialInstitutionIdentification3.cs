@@ -1,6 +1,7 @@
 ﻿using System.Xml.Serialization;
 using System;
 using Unifi.Pain;
+using Unifi.Pain.CustomerDirectDebitInitiation;
 
 namespace Unifi.Pain.CustomerDirectDebitInitiationV01
 {
@@ -13,7 +14,7 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV01
 
         public string Nm { get; set; }
 
-        public PostalAddress1 PstlAdr { get; set; }
+        public PostalAddress PstlAdr { get; set; }
 
         public GenericIdentification3 PrtryId { get; set; }
 

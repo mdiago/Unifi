@@ -39,6 +39,7 @@
 
 using System;
 using System.Xml.Serialization;
+using Unifi.Pain.CustomerDirectDebitInitiation;
 
 namespace Unifi.Pain.CustomerDirectDebitInitiationV08
 {
@@ -49,13 +50,13 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV08
 
         public string OrgnlMndtId { get; set; }
 
-        public PartyIdentification135 OrgnlCdtrSchmeId { get; set; }
+        public PartyIdentification OrgnlCdtrSchmeId { get; set; }
 
         public BranchAndFinancialInstitutionIdentification6 OrgnlCdtrAgt { get; set; }
 
         public CashAccount38 OrgnlCdtrAgtAcct { get; set; }
 
-        public PartyIdentification135 OrgnlDbtr { get; set; }
+        public PartyIdentification OrgnlDbtr { get; set; }
 
         public CashAccount38 OrgnlDbtrAcct { get; set; }
 
@@ -71,7 +72,7 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV08
 
         public Frequency36Choice OrgnlFrqcy { get; set; }
 
-        public MandateSetupReason1Choice OrgnlRsn { get; set; }
+        public CdOrPrtryTypeChoice OrgnlRsn { get; set; }
 
         public string OrgnlTrckgDays { get; set; }
 

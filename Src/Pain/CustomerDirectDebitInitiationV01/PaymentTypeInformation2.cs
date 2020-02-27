@@ -1,6 +1,7 @@
 ﻿using System.Xml.Serialization;
 using System;
 using Unifi.Pain;
+using Unifi.Pain.CustomerDirectDebitInitiation;
 
 namespace Unifi.Pain.CustomerDirectDebitInitiationV01
 {
@@ -16,7 +17,7 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV01
         [XmlElement("SvcLvl", typeof(ServiceLevel3Choice))]
         public object Item { get; set; }
 
-        public LocalInstrument1Choice LclInstrm { get; set; }
+        public CdOrPrtryTypeChoice LclInstrm { get; set; }
 
         public SequenceType1Code SeqTp { get; set; }
 

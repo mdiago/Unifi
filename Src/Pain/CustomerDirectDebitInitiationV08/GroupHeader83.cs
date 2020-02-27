@@ -39,6 +39,7 @@
 
 using System;
 using System.Xml.Serialization;
+using Unifi.Pain.CustomerDirectDebitInitiation;
 
 namespace Unifi.Pain.CustomerDirectDebitInitiationV08
 {
@@ -96,7 +97,7 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV08
         /// <summary>
         /// Parte iniciadora
         /// </summary>
-        public PartyIdentification135 InitgPty { get; set; }
+        public PartyIdentification InitgPty { get; set; }
 
         /// <summary>
         /// ForwardingAgent

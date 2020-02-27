@@ -1,6 +1,7 @@
 ﻿using System.Xml.Serialization;
 using System;
 using Unifi.Pain;
+using Unifi.Pain.CustomerDirectDebitInitiation;
 
 namespace Unifi.Pain.CustomerDirectDebitInitiationV01
 {
@@ -19,7 +20,7 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV01
         public DateTime ReqdColltnDt { get; set; }
 
 
-        public PartyIdentification8 Cdtr { get; set; }
+        public PartyIdentification Cdtr { get; set; }
 
         public CashAccount7 CdtrAcct { get; set; }
 
@@ -27,7 +28,7 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV01
 
         public CashAccount7 CdtrAgtAcct { get; set; }
 
-        public PartyIdentification8 UltmtCdtr { get; set; }
+        public PartyIdentification UltmtCdtr { get; set; }
 
         public ChargeBearerType1Code ChrgBr { get; set; }
 

@@ -39,6 +39,7 @@
 
 using System;
 using System.Xml.Serialization;
+using Unifi.Pain.CustomerDirectDebitInitiation;
 
 namespace Unifi.Pain.CustomerDirectDebitInitiationV08
 {
@@ -47,9 +48,9 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV08
     public class CashAccount38
     {
 
-        public AccountIdentification4Choice Id { get; set; }
+        public AccountIdentificationChoice Id { get; set; }
 
-        public CashAccountType2Choice Tp { get; set; }
+        public CdOrPrtryTypeChoice Tp { get; set; }
 
         public string Ccy { get; set; }
 

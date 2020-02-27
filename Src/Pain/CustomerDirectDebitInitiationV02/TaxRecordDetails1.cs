@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Xml.Serialization;
-
+using Unifi.Pain.CustomerDirectDebitInitiation;
 
 namespace Unifi.Pain.CustomerDirectDebitInitiationV02
 {

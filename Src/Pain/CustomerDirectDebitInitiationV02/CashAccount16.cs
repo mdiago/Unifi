@@ -1,9 +1,11 @@
-﻿namespace Unifi.Pain.CustomerDirectDebitInitiationV02
+﻿using Unifi.Pain.CustomerDirectDebitInitiation;
+
+namespace Unifi.Pain.CustomerDirectDebitInitiationV02
 {
     public partial class CashAccount16
     {
 
-        public AccountIdentification4Choice Id { get; set; }
+        public AccountIdentificationChoice Id { get; set; }
         public CashAccountType2 Tp { get; set; }
 
         public string Ccy { get; set; }

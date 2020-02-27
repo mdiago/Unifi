@@ -1,4 +1,6 @@
-﻿namespace Unifi.Pain.CustomerDirectDebitInitiationV03
+﻿using Unifi.Pain.CustomerDirectDebitInitiation;
+
+namespace Unifi.Pain.CustomerDirectDebitInitiationV03
 {
     public partial class TaxRecordDetails1
     {

@@ -39,6 +39,7 @@
 
 using System;
 using System.Xml.Serialization;
+using Unifi.Pain.CustomerDirectDebitInitiation;
 
 namespace Unifi.Pain.CustomerDirectDebitInitiationV08
 {
@@ -68,7 +69,7 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV08
         [XmlElement(DataType = "date")]
         public DateTime ReqdColltnDt { get; set; }
 
-        public PartyIdentification135 Cdtr { get; set; }
+        public PartyIdentification Cdtr { get; set; }
 
         public CashAccount38 CdtrAcct { get; set; }
 
@@ -76,7 +77,7 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV08
 
         public CashAccount38 CdtrAgtAcct { get; set; }
 
-        public PartyIdentification135 UltmtCdtr { get; set; }
+        public PartyIdentification UltmtCdtr { get; set; }
 
         public ChargeBearerType1Code ChrgBr { get; set; }
 
@@ -87,7 +88,7 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV08
 
         public BranchAndFinancialInstitutionIdentification6 ChrgsAcctAgt { get; set; }
 
-        public PartyIdentification135 CdtrSchmeId { get; set; }
+        public PartyIdentification CdtrSchmeId { get; set; }
 
         [XmlElement("DrctDbtTxInf")]
         public DirectDebitTransactionInformation23[] DrctDbtTxInf { get; set; }

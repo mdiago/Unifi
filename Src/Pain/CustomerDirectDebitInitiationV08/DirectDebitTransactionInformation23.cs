@@ -39,6 +39,7 @@
 
 using System;
 using System.Xml.Serialization;
+using Unifi.Pain.CustomerDirectDebitInitiation;
 
 namespace Unifi.Pain.CustomerDirectDebitInitiationV08
 {
@@ -60,21 +61,21 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV08
 
         public DirectDebitTransaction10 DrctDbtTx { get; set; }
 
-        public PartyIdentification135 UltmtCdtr { get; set; }
+        public PartyIdentification UltmtCdtr { get; set; }
 
         public BranchAndFinancialInstitutionIdentification6 DbtrAgt { get; set; }
 
         public CashAccount38 DbtrAgtAcct { get; set; }
 
-        public PartyIdentification135 Dbtr { get; set; }
+        public PartyIdentification Dbtr { get; set; }
 
         public CashAccount38 DbtrAcct { get; set; }
 
-        public PartyIdentification135 UltmtDbtr { get; set; }
+        public PartyIdentification UltmtDbtr { get; set; }
 
         public string InstrForCdtrAgt { get; set; }
 
-        public Purpose2Choice Purp { get; set; }
+        public CdOrPrtryTypeChoice Purp { get; set; }
 
         [XmlElement("RgltryRptg")]
         public RegulatoryReporting3[] RgltryRptg { get; set; }

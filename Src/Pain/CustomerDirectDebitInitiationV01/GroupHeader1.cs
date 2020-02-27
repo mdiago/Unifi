@@ -1,6 +1,7 @@
 ﻿using System.Xml.Serialization;
 using System;
 using Unifi.Pain;
+using Unifi.Pain.CustomerDirectDebitInitiation;
 
 namespace Unifi.Pain.CustomerDirectDebitInitiationV01
 {
@@ -37,7 +38,7 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV01
         public Grouping1Code Grpg { get; set; }
 
 
-        public PartyIdentification8 InitgPty { get; set; }
+        public PartyIdentification InitgPty { get; set; }
 
 
         public BranchAndFinancialInstitutionIdentification3 FwdgAgt { get; set; }

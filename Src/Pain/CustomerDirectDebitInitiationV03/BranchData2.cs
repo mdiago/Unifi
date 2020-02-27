@@ -1,4 +1,6 @@
-﻿namespace Unifi.Pain.CustomerDirectDebitInitiationV03
+﻿using Unifi.Pain.CustomerDirectDebitInitiation;
+
+namespace Unifi.Pain.CustomerDirectDebitInitiationV03
 {
     public partial class BranchData2
     {
@@ -8,7 +10,7 @@
 
         public string Nm { get; set; }
 
-        public PostalAddress6 PstlAdr { get; set; }
+        public PostalAddress PstlAdr { get; set; }
 
     }
 

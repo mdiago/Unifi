@@ -39,6 +39,7 @@
 
 using System;
 using System.Xml.Serialization;
+using Unifi.Pain.CustomerDirectDebitInitiation;
 
 namespace Unifi.Pain.CustomerDirectDebitInitiationV08
 {
@@ -54,7 +55,7 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV08
         /// <summary>
         /// CodeOrProprietary. Line identification type in a coded form.
         /// </summary>
-        public DocumentLineType1Choice CdOrPrtry { get; set; }
+        public CdOrPrtryTypeChoice CdOrPrtry { get; set; }
 
         /// <summary>
         /// Issuer. Identification of the issuer of the reference document line identificationtype. Max35Text.

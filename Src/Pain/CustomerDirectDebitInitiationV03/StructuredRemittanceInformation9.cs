@@ -1,4 +1,6 @@
 ﻿using System.Xml.Serialization;
+using Unifi.Pain.CustomerDirectDebitInitiation;
+
 namespace Unifi.Pain.CustomerDirectDebitInitiationV03
 {
     public partial class StructuredRemittanceInformation9
@@ -12,9 +14,9 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV03
 
         public CreditorReferenceInformation2 CdtrRefInf { get; set; }
 
-        public PartyIdentification43 Invcr { get; set; }
+        public PartyIdentification Invcr { get; set; }
 
-        public PartyIdentification43 Invcee { get; set; }
+        public PartyIdentification Invcee { get; set; }
 
         [XmlElement("AddtlRmtInf")]
         public string[] AddtlRmtInf { get; set; }

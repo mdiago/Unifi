@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Xml.Serialization;
+using Unifi.Pain.CustomerDirectDebitInitiation;
+
 namespace Unifi.Pain.CustomerDirectDebitInitiationV03
 {
     public partial class DirectDebitTransaction7
@@ -7,7 +9,7 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV03
 
         public MandateRelatedInformation8 MndtRltdInf { get; set; }
 
-        public PartyIdentification43 CdtrSchmeId { get; set; }
+        public PartyIdentification CdtrSchmeId { get; set; }
 
         public string PreNtfctnId { get; set; }
 

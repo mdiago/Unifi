@@ -1,4 +1,6 @@
-﻿namespace Unifi.Pain.CustomerDirectDebitInitiationV03
+﻿using Unifi.Pain.CustomerDirectDebitInitiation;
+
+namespace Unifi.Pain.CustomerDirectDebitInitiationV03
 {
     public partial class FinancialInstitutionIdentification8
     {
@@ -9,9 +11,9 @@
 
         public string Nm { get; set; }
 
-        public PostalAddress6 PstlAdr { get; set; }
+        public PostalAddress PstlAdr { get; set; }
 
-        public GenericFinancialIdentification1 Othr { get; set; }
+        public GenericIdentificationCdOrPrtry Othr { get; set; }
 
     }
 

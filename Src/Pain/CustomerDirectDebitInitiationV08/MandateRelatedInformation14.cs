@@ -39,6 +39,7 @@
 
 using System;
 using System.Xml.Serialization;
+using Unifi.Pain.CustomerDirectDebitInitiation;
 
 namespace Unifi.Pain.CustomerDirectDebitInitiationV08
 {
@@ -78,7 +79,7 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV08
 
         public Frequency36Choice Frqcy { get; set; }
 
-        public MandateSetupReason1Choice Rsn { get; set; }
+        public CdOrPrtryTypeChoice Rsn { get; set; }
 
         public string TrckgDays { get; set; }
 

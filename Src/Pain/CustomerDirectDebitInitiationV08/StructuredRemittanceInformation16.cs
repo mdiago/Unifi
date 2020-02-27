@@ -39,6 +39,7 @@
 
 using System;
 using System.Xml.Serialization;
+using Unifi.Pain.CustomerDirectDebitInitiation;
 
 namespace Unifi.Pain.CustomerDirectDebitInitiationV08
 {
@@ -74,13 +75,13 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV08
         /// Invoicer. Identification of the organisation issuing the invoice, when it is different from the creditor or
         /// ultimate creditor.
         /// </summary>
-        public PartyIdentification135 Invcr { get; set; }
+        public PartyIdentification Invcr { get; set; }
 
         /// <summary>
         /// Invoicee. Identification of the party to whom an invoice is issued, when it is different from the debtor or
         /// ultimate debtor.
         /// </summary>
-        public PartyIdentification135 Invcee { get; set; }
+        public PartyIdentification Invcee { get; set; }
 
         /// <summary>
         /// TaxRemittance. Provides remittance information about a payment made for tax-related purposes.

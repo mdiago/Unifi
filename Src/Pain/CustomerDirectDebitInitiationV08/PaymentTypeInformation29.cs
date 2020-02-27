@@ -39,6 +39,7 @@
 
 using System;
 using System.Xml.Serialization;
+using Unifi.Pain.CustomerDirectDebitInitiation;
 
 namespace Unifi.Pain.CustomerDirectDebitInitiationV08
 {
@@ -54,16 +55,16 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV08
         public bool InstrPrtySpecified { get; set; }
 
         [XmlElement("SvcLvl")]
-        public ServiceLevel8Choice[] SvcLvl { get; set; }
+        public CdOrPrtryTypeChoice[] SvcLvl { get; set; }
 
-        public LocalInstrument2Choice LclInstrm { get; set; }
+        public CdOrPrtryTypeChoice LclInstrm { get; set; }
     
         public SequenceType3Code SeqTp { get; set; }
 
         [XmlIgnore()]
         public bool SeqTpSpecified { get; set; }
 
-        public CategoryPurpose1Choice CtgyPurp { get; set; }
+        public CdOrPrtryTypeChoice CtgyPurp { get; set; }
 
     }
 }
