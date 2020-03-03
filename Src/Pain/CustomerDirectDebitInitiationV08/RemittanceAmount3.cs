@@ -72,7 +72,7 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV08
         /// TaxAmount. Amount of the tax.
         /// </summary>
         [XmlElement("TaxAmt")]
-        public TaxAmountAndType1[] TaxAmt { get; set; }
+        public TaxAmountAndType[] TaxAmt { get; set; }
 
         /// <summary>
         /// AdjustmentAmountAndReason. Specifies detailed information on the amount and reason of the adjustment.

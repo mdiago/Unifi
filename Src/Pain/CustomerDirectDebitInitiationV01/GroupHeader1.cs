@@ -41,7 +41,7 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV01
         public PartyIdentification InitgPty { get; set; }
 
 
-        public BranchAndFinancialInstitutionIdentification3 FwdgAgt { get; set; }
+        public BranchAndFinancialInstitutionIdentification FwdgAgt { get; set; }
 
 
     }

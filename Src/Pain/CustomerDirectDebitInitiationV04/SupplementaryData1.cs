@@ -1,6 +1,6 @@
 ﻿namespace Unifi.Pain.CustomerDirectDebitInitiationV04
 {
-    public partial class SupplementaryData1
+    public partial class SupplementaryData
     {
         public string PlcAndNm { get; set; }
 

@@ -24,7 +24,7 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV01
         public ReferredDocumentAmount1Choice[] RfrdDocAmt { get; set; }
 
 
-        public CreditorReferenceInformation1 CdtrRefInf { get; set; }
+        public CreditorReferenceInformation CdtrRefInf { get; set; }
 
 
         public PartyIdentification Invcr { get; set; }

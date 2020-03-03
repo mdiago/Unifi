@@ -18,8 +18,9 @@ namespace Unifi.Pain.CustomerDirectDebitInitiation
         /// 1 a la 7. Para la versión 8 utilizar una instancia de
         /// la clase PostalAddressV08.
         /// </summary>
-        [XmlElement("AdrTp", typeof(AddressTypeCode))]
-        public virtual object AdrTp { get; set; }    
+        [XmlElement("AdrTp", typeof(AddressTypeCode), Namespace = Namespaces.V02)]
+        [XmlElement("AdrTp", typeof(AddressTypeChoice), Namespace = Namespaces.V08)]
+        public virtual object AdrTp { get; set; }
 
         /// <summary>
         /// True si AdrTp especificado.

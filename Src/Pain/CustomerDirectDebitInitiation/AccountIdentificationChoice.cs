@@ -37,11 +37,13 @@
     address: info@irenesolutions.com
  */
 
+using System;
 using System.Xml.Serialization;
 
 namespace Unifi.Pain.CustomerDirectDebitInitiation
 {
 
+    [Serializable()]
     public partial class AccountIdentificationChoice
     {
 

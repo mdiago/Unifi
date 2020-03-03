@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Xml.Serialization;
+using Unifi.Pain.CustomerDirectDebitInitiation;
 
 namespace Unifi.Pain.CustomerDirectDebitInitiationV02
 {
@@ -20,9 +21,9 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV02
         [XmlIgnore()]
         public bool CtrlSumSpecified { get; set; }
 
-        public PartyIdentification32 InitgPty { get; set; }
+        public PartyIdentification InitgPty { get; set; }
 
-        public BranchAndFinancialInstitutionIdentification4 FwdgAgt { get; set; }
+        public BranchAndFinancialInstitutionIdentification FwdgAgt { get; set; }
 
     }
 

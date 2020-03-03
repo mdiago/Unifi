@@ -10,13 +10,13 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV05
 
         public RemittanceAmount2 RfrdDocAmt { get; set; }
 
-        public CreditorReferenceInformation2 CdtrRefInf { get; set; }
+        public CreditorReferenceInformation CdtrRefInf { get; set; }
 
         public PartyIdentification Invcr { get; set; }
 
         public PartyIdentification Invcee { get; set; }
 
-        public TaxInformation4 TaxRmt { get; set; }
+        public TaxInformation TaxRmt { get; set; }
 
         public Garnishment1 GrnshmtRmt { get; set; }
 

@@ -1,4 +1,6 @@
 ﻿using System.Xml.Serialization;
+using Unifi.Pain.CustomerDirectDebitInitiation;
+
 namespace Unifi.Pain.CustomerDirectDebitInitiationV03
 {
     public partial class RemittanceLocation2
@@ -14,7 +16,7 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV03
 
         public string RmtLctnElctrncAdr { get; set; }
 
-        public NameAndAddress10 RmtLctnPstlAdr { get; set; }
+        public NameAndAddress RmtLctnPstlAdr { get; set; }
 
     }
 

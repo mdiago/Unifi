@@ -1,4 +1,5 @@
 ﻿using System.Xml.Serialization;
+using Unifi.Pain.CustomerDirectDebitInitiation;
 
 namespace Unifi.Pain.CustomerDirectDebitInitiationV07
 {
@@ -13,7 +14,7 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV07
 
 
         [XmlElement("SplmtryData")]
-        public SupplementaryData1[] SplmtryData { get; set; }
+        public SupplementaryData[] SplmtryData { get; set; }
 
     }
 

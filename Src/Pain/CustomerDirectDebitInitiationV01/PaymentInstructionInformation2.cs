@@ -11,9 +11,9 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV01
 
         public string PmtInfId { get; set; }
 
-        public PaymentMethod2Code PmtMtd { get; set; }
+        public PaymentMethodCode PmtMtd { get; set; }
 
-        public PaymentTypeInformation2 PmtTpInf { get; set; }
+        public PaymentTypeInformation PmtTpInf { get; set; }
 
 
         [XmlElement(DataType = "date")]
@@ -22,22 +22,22 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV01
 
         public PartyIdentification Cdtr { get; set; }
 
-        public CashAccount7 CdtrAcct { get; set; }
+        public CashAccount CdtrAcct { get; set; }
 
-        public BranchAndFinancialInstitutionIdentification3 CdtrAgt { get; set; }
+        public BranchAndFinancialInstitutionIdentification CdtrAgt { get; set; }
 
-        public CashAccount7 CdtrAgtAcct { get; set; }
+        public CashAccount CdtrAgtAcct { get; set; }
 
         public PartyIdentification UltmtCdtr { get; set; }
 
-        public ChargeBearerType1Code ChrgBr { get; set; }
+        public ChargeBearerTypeCode ChrgBr { get; set; }
 
         [XmlIgnore()]
         public bool ChrgBrSpecified { get; set; }
 
-        public CashAccount7 ChrgsAcct { get; set; }
+        public CashAccount ChrgsAcct { get; set; }
 
-        public BranchAndFinancialInstitutionIdentification3 ChrgsAcctAgt { get; set; }
+        public BranchAndFinancialInstitutionIdentification ChrgsAcctAgt { get; set; }
 
 
         [XmlElement("DrctDbtTxInf")]

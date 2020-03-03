@@ -1,33 +1,35 @@
 ﻿using System.Xml.Serialization;
 using Unifi.Pain.CustomerDirectDebitInitiation;
+using Unifi.Pain.CustomerDirectDebitInitiationV02;
+using Unifi.Pain.CustomerDirectDebitInitiationV03;
 
 namespace Unifi.Pain.CustomerDirectDebitInitiationV06
 {
     public partial class DirectDebitTransactionInformation19
     {
 
-        public PaymentIdentification1 PmtId { get; set; }
+        public PaymentIdentification PmtId { get; set; }
 
-        public PaymentTypeInformation24 PmtTpInf { get; set; }
+        public PaymentTypeInformation PmtTpInf { get; set; }
 
         public ActiveOrHistoricCurrencyAndAmount InstdAmt { get; set; }
 
-        public ChargeBearerType1Code ChrgBr { get; set; }
+        public ChargeBearerTypeCode ChrgBr { get; set; }
 
         [XmlIgnore()]
         public bool ChrgBrSpecified { get; set; }
 
-        public DirectDebitTransaction8 DrctDbtTx { get; set; }
+        public DirectDebitTransaction DrctDbtTx { get; set; }
 
         public PartyIdentification UltmtCdtr { get; set; }
 
-        public BranchAndFinancialInstitutionIdentification5 DbtrAgt { get; set; }
+        public BranchAndFinancialInstitutionIdentification DbtrAgt { get; set; }
 
-        public CashAccount24 DbtrAgtAcct { get; set; }
+        public CashAccount DbtrAgtAcct { get; set; }
 
         public PartyIdentification Dbtr { get; set; }
 
-        public CashAccount24 DbtrAcct { get; set; }
+        public CashAccount DbtrAcct { get; set; }
 
         public PartyIdentification UltmtDbtr { get; set; }
 
@@ -36,9 +38,9 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV06
         public CdOrPrtryTypeChoice Purp { get; set; }
 
         [XmlElement("RgltryRptg")]
-        public RegulatoryReporting3[] RgltryRptg { get; set; }
+        public RegulatoryReporting[] RgltryRptg { get; set; }
 
-        public TaxInformation3 Tax { get; set; }
+        public TaxInformation Tax { get; set; }
 
         [XmlElement("RltdRmtInf")]
         public RemittanceLocation4[] RltdRmtInf { get; set; }
@@ -46,7 +48,7 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV06
         public RemittanceInformation11 RmtInf { get; set; }
 
         [XmlElement("SplmtryData")]
-        public SupplementaryData1[] SplmtryData { get; set; }
+        public SupplementaryData[] SplmtryData { get; set; }
 
     }
 

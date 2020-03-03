@@ -1,4 +1,5 @@
 ﻿using System.Xml.Serialization;
+using Unifi.Pain.CustomerDirectDebitInitiation;
 
 namespace Unifi.Pain.CustomerDirectDebitInitiationV06
 {
@@ -6,7 +7,7 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV06
     {
 
         
-        [XmlElement("Cd", typeof(DocumentType6Code))]
+        [XmlElement("Cd", typeof(CommercialDocumentTypeCode))]
         [XmlElement("Prtry", typeof(string))]
         public object Item { get; set; }
 

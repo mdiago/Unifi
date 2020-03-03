@@ -1,4 +1,5 @@
 ﻿using System.Xml.Serialization;
+using Unifi.Pain.CustomerDirectDebitInitiation;
 
 namespace Unifi.Pain.CustomerDirectDebitInitiationV04
 {
@@ -19,7 +20,7 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV04
         public string RmtLctnElctrncAdr { get; set; }
 
 
-        public NameAndAddress10 RmtLctnPstlAdr { get; set; }
+        public NameAndAddress RmtLctnPstlAdr { get; set; }
 
     }
 

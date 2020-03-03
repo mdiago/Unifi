@@ -39,6 +39,7 @@
 
 using System;
 using System.Xml.Serialization;
+using Unifi.Pain.CustomerDirectDebitInitiation;
 
 namespace Unifi.Pain.CustomerDirectDebitInitiationV08
 {
@@ -51,7 +52,7 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV08
 
         public string ElctrncAdr { get; set; }
 
-        public NameAndAddress16 PstlAdr { get; set; }
+        public NameAndAddress PstlAdr { get; set; }
 
     }
 

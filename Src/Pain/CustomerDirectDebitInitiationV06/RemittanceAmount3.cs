@@ -14,7 +14,7 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV06
         public ActiveOrHistoricCurrencyAndAmount CdtNoteAmt { get; set; }
 
         [XmlElement("TaxAmt")]
-        public TaxAmountAndType1[] TaxAmt { get; set; }
+        public TaxAmountAndType[] TaxAmt { get; set; }
 
 
         [XmlElement("AdjstmntAmtAndRsn")]

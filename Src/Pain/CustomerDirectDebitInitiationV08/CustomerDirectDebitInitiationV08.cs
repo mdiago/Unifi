@@ -39,6 +39,7 @@
 
 using System;
 using System.Xml.Serialization;
+using Unifi.Pain.CustomerDirectDebitInitiation;
 
 namespace Unifi.Pain.CustomerDirectDebitInitiationV08
 {
@@ -103,7 +104,7 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV08
         /// más el bloque de información de adeudo directo básico (D).</para>
         /// </summary>
         [XmlElement("SplmtryData")]
-        public SupplementaryData1[] SplmtryData { get; set; }
+        public SupplementaryData[] SplmtryData { get; set; }
 
         /// <summary>
         /// Representación textual de la instancia.

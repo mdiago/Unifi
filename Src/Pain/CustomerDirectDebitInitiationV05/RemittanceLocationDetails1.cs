@@ -1,4 +1,6 @@
-﻿namespace Unifi.Pain.CustomerDirectDebitInitiationV05
+﻿using Unifi.Pain.CustomerDirectDebitInitiation;
+
+namespace Unifi.Pain.CustomerDirectDebitInitiationV05
 {
     public partial class RemittanceLocationDetails1
     {
@@ -6,7 +8,7 @@
 
         public string ElctrncAdr { get; set; }
 
-        public NameAndAddress10 PstlAdr { get; set; }
+        public NameAndAddress PstlAdr { get; set; }
 
     }
 

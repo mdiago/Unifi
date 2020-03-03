@@ -17,7 +17,7 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV07
 
 
         [XmlElement("TaxAmt")]
-        public TaxAmountAndType1[] TaxAmt { get; set; }
+        public TaxAmountAndType[] TaxAmt { get; set; }
 
         [XmlElement("AdjstmntAmtAndRsn")]
         public DocumentAdjustment1[] AdjstmntAmtAndRsn { get; set; }

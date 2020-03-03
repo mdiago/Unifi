@@ -1,4 +1,5 @@
 ﻿using System.Xml.Serialization;
+using Unifi.Pain.CustomerDirectDebitInitiation;
 
 namespace Unifi.Pain.CustomerDirectDebitInitiationV06
 {
@@ -7,7 +8,7 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV06
 
         
         [XmlElement("Prd", typeof(FrequencyPeriod1))]
-        [XmlElement("Tp", typeof(Frequency6Code))]
+        [XmlElement("Tp", typeof(FrequencyCode))]
         public object Item { get; set; }
 
     }

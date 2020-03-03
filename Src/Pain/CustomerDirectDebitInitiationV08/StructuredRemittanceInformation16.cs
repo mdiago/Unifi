@@ -69,7 +69,7 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV08
         /// CreditorReferenceInformation. Reference information provided by the creditor to allow the identification of the underlying
         /// documents.
         /// </summary>
-        public CreditorReferenceInformation2 CdtrRefInf { get; set; }
+        public CreditorReferenceInformation CdtrRefInf { get; set; }
 
         /// <summary>
         /// Invoicer. Identification of the organisation issuing the invoice, when it is different from the creditor or
@@ -86,7 +86,7 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV08
         /// <summary>
         /// TaxRemittance. Provides remittance information about a payment made for tax-related purposes.
         /// </summary>
-        public TaxInformation7 TaxRmt { get; set; }
+        public TaxInformation TaxRmt { get; set; }
 
         /// <summary>
         /// GarnishmentRemittance. Provides remittance information about a payment for garnishment-related purposes.

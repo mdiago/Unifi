@@ -12,7 +12,7 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV04
 
 
         [XmlElement("SplmtryData")]
-        public SupplementaryData1[] SplmtryData { get; set; }
+        public SupplementaryData[] SplmtryData { get; set; }
     }
 
 

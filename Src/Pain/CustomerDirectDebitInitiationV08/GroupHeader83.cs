@@ -102,7 +102,7 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV08
         /// <summary>
         /// ForwardingAgent
         /// </summary>
-        public BranchAndFinancialInstitutionIdentification6 FwdgAgt { get; set; }
+        public BranchAndFinancialInstitutionIdentification FwdgAgt { get; set; }
 
         /// <summary>
         /// Representación textual de la instancia.

@@ -44,32 +44,31 @@ using Unifi.Pain.CustomerDirectDebitInitiation;
 namespace Unifi.Pain.CustomerDirectDebitInitiationV08
 {
     [Serializable()]
-    [XmlType(Namespace = AaNamespaces.Root)]
     public class DirectDebitTransactionInformation23
     {
 
-        public PaymentIdentification6 PmtId { get; set; }
+        public PaymentIdentification PmtId { get; set; }
 
-        public PaymentTypeInformation29 PmtTpInf { get; set; }
+        public PaymentTypeInformation PmtTpInf { get; set; }
 
         public ActiveOrHistoricCurrencyAndAmount InstdAmt { get; set; }
 
-        public ChargeBearerType1Code ChrgBr { get; set; }
+        public ChargeBearerTypeCode ChrgBr { get; set; }
 
         [XmlIgnore()]
         public bool ChrgBrSpecified { get; set; }
 
-        public DirectDebitTransaction10 DrctDbtTx { get; set; }
+        public DirectDebitTransaction DrctDbtTx { get; set; }
 
         public PartyIdentification UltmtCdtr { get; set; }
 
-        public BranchAndFinancialInstitutionIdentification6 DbtrAgt { get; set; }
+        public BranchAndFinancialInstitutionIdentification DbtrAgt { get; set; }
 
-        public CashAccount38 DbtrAgtAcct { get; set; }
+        public CashAccount DbtrAgtAcct { get; set; }
 
         public PartyIdentification Dbtr { get; set; }
 
-        public CashAccount38 DbtrAcct { get; set; }
+        public CashAccount DbtrAcct { get; set; }
 
         public PartyIdentification UltmtDbtr { get; set; }
 
@@ -78,9 +77,9 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV08
         public CdOrPrtryTypeChoice Purp { get; set; }
 
         [XmlElement("RgltryRptg")]
-        public RegulatoryReporting3[] RgltryRptg { get; set; }
+        public RegulatoryReporting[] RgltryRptg { get; set; }
 
-        public TaxInformation8 Tax { get; set; }
+        public TaxInformation Tax { get; set; }
 
         [XmlElement("RltdRmtInf")]
         public RemittanceLocation7[] RltdRmtInf { get; set; }
@@ -88,7 +87,7 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV08
         public RemittanceInformation16 RmtInf { get; set; }
 
         [XmlElement("SplmtryData")]
-        public SupplementaryData1[] SplmtryData { get; set; }
+        public SupplementaryData[] SplmtryData { get; set; }
 
         /// <summary>
         /// Representación textual de la instancia.

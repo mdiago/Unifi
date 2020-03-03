@@ -12,7 +12,7 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV03
 
         private ActiveOrHistoricCurrencyAndAmount cdtNoteAmtField;
 
-        private TaxAmountAndType1[] taxAmtField;
+        private TaxAmountAndType[] taxAmtField;
 
         private DocumentAdjustment1[] adjstmntAmtAndRsnField;
 
@@ -27,7 +27,7 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV03
         public ActiveOrHistoricCurrencyAndAmount CdtNoteAmt { get; set; }
 
         [XmlElement("TaxAmt")]
-        public TaxAmountAndType1[] TaxAmt { get; set; }
+        public TaxAmountAndType[] TaxAmt { get; set; }
 
 
         [XmlElement("AdjstmntAmtAndRsn")]
