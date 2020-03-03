@@ -42,6 +42,13 @@ using System.Xml.Serialization;
 
 namespace Unifi.Pain.CustomerDirectDebitInitiation
 {
+
+
+    /// <summary>
+    /// Opciones para especificar el nivel de aprobación en función de una serie de factores,
+    /// incluido el tipo de pago, el importe umbral o el país local o la
+    /// práctica de operaciones.
+    /// </summary>
     [Serializable()]
     public partial class AuthorisationChoice
     {

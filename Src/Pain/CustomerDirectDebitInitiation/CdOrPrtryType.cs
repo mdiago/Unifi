@@ -39,6 +39,11 @@
 
 namespace Unifi.Pain.CustomerDirectDebitInitiation
 {
+
+    /// <summary>
+    /// Indica si se trata de un tipo codificado
+    /// o una cadena con significado del propietario.
+    /// </summary>
     public enum CdOrPrtryType
     {
 

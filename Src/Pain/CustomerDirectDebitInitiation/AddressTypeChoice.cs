@@ -44,7 +44,7 @@ namespace Unifi.Pain.CustomerDirectDebitInitiation
 {
 
     /// <summary>
-    /// Type of address expressed as a code.
+    /// tipo de dirección expresada como un código.
     /// </summary>
     [Serializable()]
     public class AddressTypeChoice

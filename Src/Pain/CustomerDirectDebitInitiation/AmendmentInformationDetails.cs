@@ -43,33 +43,69 @@ using System.Xml.Serialization;
 namespace Unifi.Pain.CustomerDirectDebitInitiation
 {
 
+    /// <summary>
+    /// Proporciona más detalles sobre la lista de elementos del mandato
+    /// de débito directo que se han modificado cuando se ha establecido
+    /// el indicador de enmienda.
+    /// </summary>
     [Serializable()]
     public partial class AmendmentInformationDetails
     {
 
-
+        /// <summary>
+        /// Identificación única, según lo asignado por el acreedor,
+        /// para identificar inequívocamente el mandato original.
+        /// </summary>
         public string OrgnlMndtId { get; set; }
 
+        /// <summary>
+        /// Identificación original del esquema de acreedor que ha sido modificado.
+        /// </summary>
         public PartyIdentification OrgnlCdtrSchmeId { get; set; }
 
+        /// <summary>
+        /// Agente deudor original que ha sido modificado.
+        /// </summary>
         public BranchAndFinancialInstitutionIdentification OrgnlCdtrAgt { get; set; }
 
+        /// <summary>
+        ///  Cuenta de agente acreedor original que ha sido modificada.
+        /// </summary>
         public CashAccount OrgnlCdtrAgtAcct { get; set; }
 
+        /// <summary>
+        /// Deudor original que ha sido modificado.
+        /// </summary>
         public PartyIdentification OrgnlDbtr { get; set; }
 
+        /// <summary>
+        /// Cuenta deudor original que ha sido modificada.
+        /// </summary>
         public CashAccount OrgnlDbtrAcct { get; set; }
 
+        /// <summary>
+        /// Agente deudor original que ha sido modificado.
+        /// </summary>
         public BranchAndFinancialInstitutionIdentification OrgnlDbtrAgt { get; set; }
 
+        /// <summary>
+        /// Cuenta original del agente deudor que ha sido modificada.
+        /// </summary>
         public CashAccount OrgnlDbtrAgtAcct { get; set; }
 
+        /// <summary>
+        /// Fecha de recolección final original que ha sido modificada.
+        /// </summary>
         [XmlElement(DataType = "date")]
         public DateTime OrgnlFnlColltnDt { get; set; }
+
 
         [XmlIgnore()]
         public bool OrgnlFnlColltnDtSpecified { get; set; }
 
+        /// <summary>
+        /// Frecuencia original que ha sido modificada.
+        /// </summary>
         [XmlElement("OrgnlFrqcy", typeof(FrequencyCode), Namespace = Namespaces.V02)]
         [XmlElement("OrgnlFrqcy", typeof(FrequencyChoice), Namespace = Namespaces.V08)]
         public virtual object OrgnlFrqcy { get; set; }

@@ -40,6 +40,9 @@
 namespace Unifi.Pain.CustomerDirectDebitInitiation
 {
 
+    /// <summary>
+    /// Tipos de identificador de cuenta.
+    /// </summary>
     public enum AccountIdentificationType
     {
 

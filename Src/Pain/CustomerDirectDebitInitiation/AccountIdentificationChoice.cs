@@ -43,6 +43,9 @@ using System.Xml.Serialization;
 namespace Unifi.Pain.CustomerDirectDebitInitiation
 {
 
+    /// <summary>
+    /// Opciones de identificación de cuenta.
+    /// </summary>
     [Serializable()]
     public partial class AccountIdentificationChoice
     {

@@ -39,6 +39,10 @@
 
 namespace Unifi.Pain.CustomerDirectDebitInitiation
 {
+
+    /// <summary>
+    /// Códigos de tipos de dirección.
+    /// </summary>
     public enum AddressTypeCode
     {
 

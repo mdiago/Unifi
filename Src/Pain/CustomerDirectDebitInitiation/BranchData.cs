@@ -37,12 +37,15 @@
     address: info@irenesolutions.com
  */
 
+using System;
+
 namespace Unifi.Pain.CustomerDirectDebitInitiation
 {
 
     /// <summary>
     /// Información que localiza e identifica una sucursal específica de una institución financiera.
     /// </summary>
+    [Serializable()]
     public partial class BranchData
     {
 
