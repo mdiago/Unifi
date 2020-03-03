@@ -49,7 +49,7 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV08
     /// El mensaje ISO 20022 de iniciación de adeudos directos básicos por el cliente (pain.008.001.08.
     /// </summary>
     [Serializable()]
-    [XmlType(Namespace = AaNamespaces.Root)]
+    [XmlType(Namespace = Namespaces.V08)]
     public class CustomerDirectDebitInitiationV08
     {
 
@@ -66,7 +66,7 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV08
         ///             'n' en el caso de que contenga múltiples)</para>
         /// <para>  - Presentador/ Initiating Party (parte que envía el mensaje)</para>
         /// </summary>
-        public GroupHeader83 GrpHdr { get; set; }
+        public GroupHeader GrpHdr { get; set; }
 
         /// <summary>
         /// <para>Información del pago (Payment Information)</para>
@@ -93,7 +93,7 @@ namespace Unifi.Pain.CustomerDirectDebitInitiationV08
         /// <para>  - Cláusula de gastos / Charges Bearer</para>
         /// </summary>
         [XmlElement("PmtInf")]
-        public PaymentInstruction29[] PmtInf { get; set; }
+        public PaymentInstruction[] PmtInf { get; set; }
 
         /// <summary>
         /// <para>Información del adeudo directo individual (Direct Debit transaction information)</para>

@@ -43,10 +43,12 @@ using System.Xml.Serialization;
 namespace Unifi.Pain.CustomerDirectDebitInitiationV08
 {
 
-
+    /// <summary>
+    /// Representa un documento especificado en la norma ISO 20022.
+    /// </summary>
     [Serializable()]
-    [XmlType(Namespace = AaNamespaces.Root)]
-    [XmlRoot(Namespace = AaNamespaces.Root, IsNullable = false)]
+    [XmlType(Namespace = Namespaces.V08)]
+    [XmlRoot(Namespace = Namespaces.V08, IsNullable = false)]
     public class Document
     {        
 
