@@ -14,7 +14,7 @@ El panel de Pagos cubre mensajes que comprenden la administración de las cuenta
 
 **Creditor Payment Activation**
 
-* [CustomerDirectDebitInitiation](001-CustomerDirectDebitInitiation#customerdirectdebitinitiation)
+* [CustomerDirectDebitInitiation](https://github.com/mdiago/Unifi/wiki/001-CustomerDirectDebitInitiation)
 
 ### Compensación y liquidación de pagos (pacs, remt, pacs, camt, reda)
 
