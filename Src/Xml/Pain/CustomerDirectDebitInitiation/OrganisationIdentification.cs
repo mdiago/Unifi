@@ -106,7 +106,7 @@ namespace Unifi.Xml.Pain.CustomerDirectDebitInitiation
         /// <summary>
         /// Únicamente válido para la versión 1.
         /// Sistema de numeración universal de datos. Un número de identificación único
-        /// proporcionado por Dun & Bradstreet para identificar una organización.
+        /// proporcionado por Dun y Bradstreet para identificar una organización.
         /// </summary>
         [Obsolete("Utilizar únicamente en la versión 1.")]
         public string DUNS { get; set; }

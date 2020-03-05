@@ -39,6 +39,10 @@
 
 namespace Unifi.Business.Pain
 {
+
+    /// <summary>
+    /// Acreedor que inicia el mensaje.
+    /// </summary>
     public class CustomerDirectDebitInitiationParty
     {
 

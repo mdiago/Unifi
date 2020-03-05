@@ -61,7 +61,9 @@ namespace Unifi.Xml.Pain.CustomerDirectDebitInitiation
         /// </summary>
         public RemittanceLocationMethodCode RmtLctnMtd { get; set; }
 
-
+        /// <summary>
+        /// True si RmtLctnMtd especificado.
+        /// </summary>
         [XmlIgnore()]
         public bool RmtLctnMtdSpecified { get; set; }
 

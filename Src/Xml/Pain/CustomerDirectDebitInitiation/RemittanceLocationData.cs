@@ -41,14 +41,27 @@ using System;
 
 namespace Unifi.Xml.Pain.CustomerDirectDebitInitiation
 {
+
+    /// <summary>
+    /// RemittanceLocationData
+    /// </summary>
     [Serializable()]
     public class RemittanceLocationData
     {
 
+        /// <summary>
+        /// Método utilizado para entregar la información del aviso de envío.
+        /// </summary>
         public RemittanceLocationMethodCode Mtd { get; set; }
 
+        /// <summary>
+        /// Dirección electrónica a la que un agente debe enviar la información de envío.
+        /// </summary>
         public string ElctrncAdr { get; set; }
 
+        /// <summary>
+        /// Dirección postal a la que un agente debe enviar la información de envío.
+        /// </summary>
         public NameAndAddress PstlAdr { get; set; }
 
     }

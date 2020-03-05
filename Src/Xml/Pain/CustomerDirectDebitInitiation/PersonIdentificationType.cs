@@ -40,6 +40,9 @@
 namespace Unifi.Xml.Pain.CustomerDirectDebitInitiation
 {
 
+    /// <summary>
+    /// Identificación de un persona física.
+    /// </summary>
     public enum PersonIdentificationType
     {
 

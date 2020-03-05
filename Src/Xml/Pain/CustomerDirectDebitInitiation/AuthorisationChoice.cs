@@ -53,6 +53,9 @@ namespace Unifi.Xml.Pain.CustomerDirectDebitInitiation
     public class AuthorisationChoice
     {
 
+        /// <summary>
+        /// Cadena de código de autorización.
+        /// </summary>
         [XmlElement("Cd", typeof(AuthorisationCode))]
         [XmlElement("Prtry", typeof(string))]
         public object Item { get; set; }

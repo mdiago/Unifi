@@ -77,13 +77,20 @@ namespace Unifi.Xml.Pain.CustomerDirectDebitInitiationV07
     public class CustomerDirectDebitInitiationV07
     {
 
+        /// <summary>
+        /// Cabecera del mensaje.
+        /// </summary>
         public GroupHeader GrpHdr { get; set; }
 
-        
+        /// <summary>
+        /// Información del mensaje.
+        /// </summary>        
         [XmlElement("PmtInf")]
         public PaymentInstruction[] PmtInf { get; set; }
 
-
+        /// <summary>
+        /// Información adicional.
+        /// </summary>
         [XmlElement("SplmtryData")]
         public SupplementaryData[] SplmtryData { get; set; }
 

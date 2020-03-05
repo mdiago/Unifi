@@ -50,6 +50,9 @@ namespace Unifi.Xml.Pain.CustomerDirectDebitInitiation
     public class AddressTypeChoice
     {
 
+        /// <summary>
+        /// Cadena de tipo de dirección.
+        /// </summary>
         [XmlElement("Cd", typeof(AddressTypeCode))]
         [XmlElement("Prtry", typeof(GenericIdentification))]
         public object Item { get; set; }

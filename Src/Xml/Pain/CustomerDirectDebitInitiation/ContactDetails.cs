@@ -41,6 +41,10 @@ using System.Xml.Serialization;
 
 namespace Unifi.Xml.Pain.CustomerDirectDebitInitiation
 {
+ 
+    /// <summary>
+    /// Detalles de contacto.
+    /// </summary>
     public class ContactDetails
     {
 

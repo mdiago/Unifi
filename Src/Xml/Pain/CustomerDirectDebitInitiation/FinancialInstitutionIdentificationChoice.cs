@@ -41,12 +41,16 @@ using System.Xml.Serialization;
 
 namespace Unifi.Xml.Pain.CustomerDirectDebitInitiation
 {
+
+    /// <summary>
+    /// Tipo de institución financiera.
+    /// </summary>
     public class FinancialInstitutionIdentificationChoice
     {
 
-
-        //[XmlElement("BIC", typeof(string))]
-        //[XmlElement("ClrSysMmbId", typeof(ClearingSystemMemberIdentificationChoice))]
+        /// <summary>
+        /// Valor que define el tipo de institución financiera.
+        /// </summary>
         [XmlElement("CmbndId", typeof(FinancialInstitutionIdentification))]
         [XmlElement("NmAndAdr", typeof(NameAndAddress))]
         [XmlElement("PrtryId", typeof(GenericIdentification))]

@@ -41,12 +41,22 @@ using System;
 
 namespace Unifi.Xml.Pain.CustomerDirectDebitInitiation
 {
+
+    /// <summary>
+    /// Periodo de frecuencia.
+    /// </summary>
     [Serializable()]
     public class FrequencyPeriod
     {
 
+        /// <summary>
+        /// Periodicidad.
+        /// </summary>
         public FrequencyCode Tp { get; set; }
 
+        /// <summary>
+        /// Veces por periodo.
+        /// </summary>
         public decimal CntPerPrd { get; set; }
 
     }

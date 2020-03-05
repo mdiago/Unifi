@@ -57,6 +57,9 @@ namespace Unifi.Xml.Pain.CustomerDirectDebitInitiation
         /// </summary>
         public RegulatoryReportingTypeCode DbtCdtRptgInd { get; set; }
 
+        /// <summary>
+        /// True si DbtCdtRptgInd especificado.
+        /// </summary>
         [XmlIgnore()]
         public bool DbtCdtRptgIndSpecified { get; set; }
 

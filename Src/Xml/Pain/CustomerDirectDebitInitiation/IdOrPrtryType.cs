@@ -39,13 +39,23 @@
 
 namespace Unifi.Xml.Pain.CustomerDirectDebitInitiation
 {
+
+    /// <summary>
+    /// Indica si el tipo de representa mediante un 
+    /// identificador o y string definido por el
+    /// propietario.
+    /// </summary>
     public enum IdOrPrtryType
     {
 
-
+        /// <summary>
+        /// Identificador.
+        /// </summary>
         Id,
 
-
+        /// <summary>
+        /// Propietario.
+        /// </summary>
         Prtry,
     }
 

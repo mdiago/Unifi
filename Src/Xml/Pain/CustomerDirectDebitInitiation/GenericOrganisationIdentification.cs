@@ -48,11 +48,19 @@ namespace Unifi.Xml.Pain.CustomerDirectDebitInitiation
     public class GenericOrganisationIdentification
     {
 
+        /// <summary>
+        /// Identificación.
+        /// </summary>
         public string Id { get; set; }
 
+        /// <summary>
+        /// Esquema de referencia.
+        /// </summary>
         public CdOrPrtryTypeChoice SchmeNm { get; set; }
 
-
+        /// <summary>
+        /// Emisor
+        /// </summary>
         public string Issr { get; set; }
 
     }

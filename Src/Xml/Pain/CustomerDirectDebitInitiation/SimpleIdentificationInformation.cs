@@ -39,11 +39,16 @@
 
 namespace Unifi.Xml.Pain.CustomerDirectDebitInitiation
 {
-
+    /// <summary>
+    /// Información relacionada con una identificación, por ejemplo, identificación de parte o identificación de cuenta.
+    /// </summary>
     public class SimpleIdentificationInformation
     {
 
-
+        /// <summary>
+        /// Nombre o número asignado por una entidad para permitir el reconocimiento
+        /// de esa entidad, por ejemplo, el identificador de cuenta.
+        /// </summary>
         public string Id { get; set; }
 
     }

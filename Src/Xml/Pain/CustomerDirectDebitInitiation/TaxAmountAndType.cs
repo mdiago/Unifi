@@ -42,6 +42,9 @@ using System;
 namespace Unifi.Xml.Pain.CustomerDirectDebitInitiation
 {
 
+    /// <summary>
+    /// Especifica la cantidad con un tipo específico.
+    /// </summary>
     [Serializable()]
     public class TaxAmountAndType
     {

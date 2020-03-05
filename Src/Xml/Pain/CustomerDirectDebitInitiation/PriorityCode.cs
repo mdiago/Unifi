@@ -41,6 +41,10 @@ using System;
 
 namespace Unifi.Xml.Pain.CustomerDirectDebitInitiation
 {
+
+    /// <summary>
+    /// Código que establece la urgencia de una transacción.
+    /// </summary>
     [Serializable()]
     public enum PriorityCode
     {

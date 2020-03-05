@@ -41,15 +41,24 @@ using System.Xml.Serialization;
 
 namespace Unifi.Xml.Pain.CustomerDirectDebitInitiation
 {
+
+    /// <summary>
+    /// Tipo de sistema de compensación.
+    /// </summary>
     public class ClearingSystemMemberIdentificationChoice
     {
 
+        /// <summary>
+        /// Valor identificador o referencia interna.
+        /// </summary>
         [XmlElement("Id", typeof(string))]
         [XmlElement("Prtry", typeof(string))]
         [XmlChoiceIdentifier("ItemElementName")]
         public string Item { get; set; }
 
-
+        /// <summary>
+        /// Nombre del tipo de id.
+        /// </summary>
         [XmlIgnore()]
         public IdOrPrtryType ItemElementName { get; set; }
 

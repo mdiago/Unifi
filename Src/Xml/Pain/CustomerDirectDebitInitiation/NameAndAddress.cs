@@ -42,13 +42,22 @@ using System;
 namespace Unifi.Xml.Pain.CustomerDirectDebitInitiation
 {
 
+
+    /// <summary>
+    /// Representa un nombre y una dirección.
+    /// </summary>
     [Serializable()]
     public class NameAndAddress
     {
 
+        /// <summary>
+        /// Nombre.
+        /// </summary>
         public string Nm { get; set; }
 
-
+        /// <summary>
+        /// Dirección.
+        /// </summary>
         public PostalAddress PstlAdr { get; set; }
 
     }

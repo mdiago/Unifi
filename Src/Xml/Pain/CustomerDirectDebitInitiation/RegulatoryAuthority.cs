@@ -42,13 +42,23 @@ using System.Xml.Serialization;
 
 namespace Unifi.Xml.Pain.CustomerDirectDebitInitiation
 {
+
+    /// <summary>
+    /// Entidad que requiere la información de reporte regulatorio.
+    /// </summary>
     [Serializable()]
     public class RegulatoryAuthority
     {
 
+        /// <summary>
+        /// Nombre de la entidad que requiere la información de reporte regulatorio.
+        /// </summary>
         [XmlElement("AuthrtyNm", typeof(string), Namespace = Namespaces.V01)]
         public string Nm { get; set; }
 
+        /// <summary>
+        /// País de la entidad que requiere la información de reporte regulatorio.
+        /// </summary>
         [XmlElement("AuthrtyCtry", typeof(string), Namespace = Namespaces.V01)]
         public string Ctry { get; set; }
 

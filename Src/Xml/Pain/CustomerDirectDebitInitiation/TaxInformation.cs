@@ -43,12 +43,19 @@ using System.Xml.Serialization;
 namespace Unifi.Xml.Pain.CustomerDirectDebitInitiation
 {
 
+    /// <summary>
+    /// Detalles sobre los impuestos pagados, o por pagar, al gobierno de
+    /// conformidad con la ley, incluidos los parámetros predefinidos, como
+    /// los umbrales y el tipo de cuenta.
+    /// </summary>
     [Serializable()]
     public class TaxInformation
     {
 
         /// <summary>
-        /// Sólo versión 1.
+        /// Sólo versión 1. 	
+        /// Parte del lado del crédito de la transacción
+        /// a la que se aplica el impuesto.
         /// </summary>
         public string CdtrTaxId { get; set; }
 
@@ -58,27 +65,32 @@ namespace Unifi.Xml.Pain.CustomerDirectDebitInitiation
         public string CdtrTaxTp { get; set; }
 
         /// <summary>
-        /// Sólo versión 1.
+        /// Sólo versión 1. 	
+        /// Parte en el lado de débito de la transacción a la
+        /// que se aplica el impuesto.
         /// </summary>
         public string DbtrTaxId { get; set; }
 
         /// <summary>
-        /// Sólo versión 1.
+        /// Sólo versión 1. Tax reference information that is specific to a taxing agency.
         /// </summary>
         public string TaxRefNb { get; set; }
 
         /// <summary>
-        /// Sólo versión 1.
+        /// Sólo versión 1. Date by which tax is due.
         /// </summary>
         [XmlElement(DataType = "date")]
         public DateTime TaxDt { get; set; }
 
-
+        /// <summary>
+        /// True si taxDt especificado.
+        /// </summary>
         [XmlIgnore()]
         public bool TaxDtSpecified { get; set; }
 
         /// <summary>
-        /// Sólo versión 1.
+        /// Sólo versión 1. 	
+        /// Records of tax details.
         /// </summary>
         [XmlElement("TaxTpInf")]
         public TaxRecord[] TaxTpInf { get; set; }

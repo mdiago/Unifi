@@ -41,6 +41,10 @@ using System;
 
 namespace Unifi.Xml.Pain.CustomerDirectDebitInitiation
 {
+
+    /// <summary>
+    /// Método de pago.
+    /// </summary>
     [Serializable()]
     public enum PaymentMethodCode
     {

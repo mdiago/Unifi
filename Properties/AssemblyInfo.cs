@@ -6,12 +6,12 @@ using System.Runtime.InteropServices;
 // conjunto de atributos. Cambie estos valores de atributo para modificar la información
 // asociada con un ensamblado.
 [assembly: AssemblyTitle("Unifi")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("ISO 20022, Universal financial industry message scheme")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Irene Solutions SL")]
 [assembly: AssemblyProduct("Unifi")]
-[assembly: AssemblyCopyright("Copyright ©  2020")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCopyright("Copyright © Irene Solutions SL 2020")]
+[assembly: AssemblyTrademark("Irene Solutions SL")]
 [assembly: AssemblyCulture("")]
 
 // Si establece ComVisible en false, los tipos de este ensamblado no estarán visibles 

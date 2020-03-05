@@ -43,6 +43,9 @@ using System.Xml.Serialization;
 namespace Unifi.Xml.Pain.CustomerDirectDebitInitiation
 {
 
+    /// <summary>
+    /// Lugar y fecha de nacimiento.
+    /// </summary>
     public class DateAndPlaceOfBirth
     {
 

@@ -42,10 +42,17 @@ using System.Xml.Serialization;
 
 namespace Unifi.Xml.Pain.CustomerDirectDebitInitiation
 {
+
+    /// <summary>
+    /// Representa distintos tipos de periodicidad.
+    /// </summary>
     [Serializable()]
     public class FrequencyChoice
     {
 
+        /// <summary>
+        /// Cadena que identifica el tipo de periodicidad.
+        /// </summary>
         [XmlElement("Prd", typeof(FrequencyPeriod))]
         [XmlElement("PtInTm", typeof(FrequencyAndMoment))]
         [XmlElement("Tp", typeof(FrequencyCode))]

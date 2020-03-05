@@ -72,6 +72,9 @@ namespace Unifi.Xml.Pain.CustomerDirectDebitInitiation
         /// </summary>
         public ChargeBearerTypeCode ChrgBr { get; set; }
 
+        /// <summary>
+        /// True si ChrgBrSpecified especificado.
+        /// </summary>
         [XmlIgnore()]
         public bool ChrgBrSpecified { get; set; }
 

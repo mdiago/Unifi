@@ -73,6 +73,9 @@ namespace Unifi.Xml.Pain.CustomerDirectDebitInitiation
         /// </summary>
         public bool BtchBookg { get; set; }
 
+        /// <summary>
+        /// True si BtchBookg especificado.
+        /// </summary>
         [XmlIgnore()]
         public bool BtchBookgSpecified { get; set; }
 
@@ -88,6 +91,9 @@ namespace Unifi.Xml.Pain.CustomerDirectDebitInitiation
         /// </summary>
         public decimal CtrlSum { get; set; }
 
+        /// <summary>
+        /// True si CtrlSum especificado.
+        /// </summary>
         [XmlIgnore()]
         public bool CtrlSumSpecified { get; set; }
 
@@ -138,6 +144,9 @@ namespace Unifi.Xml.Pain.CustomerDirectDebitInitiation
         /// </summary>
         public ChargeBearerTypeCode ChrgBr { get; set; }
 
+        /// <summary>
+        /// True si ChrgBr especificado.
+        /// </summary>
         [XmlIgnore()]
         public bool ChrgBrSpecified { get; set; }
 

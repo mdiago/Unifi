@@ -61,6 +61,9 @@ namespace Unifi.Xml.Pain.CustomerDirectDebitInitiation
         [XmlElement(DataType = "date")]
         public DateTime Dt { get; set; }
 
+        /// <summary>
+        /// True si Dt especificado.
+        /// </summary>
         [XmlIgnore()]
         public bool DtSpecified { get; set; }
 

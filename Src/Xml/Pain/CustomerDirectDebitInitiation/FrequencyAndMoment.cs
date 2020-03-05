@@ -42,13 +42,22 @@ using System;
 namespace Unifi.Xml.Pain.CustomerDirectDebitInitiation
 {
 
+    /// <summary>
+    /// Representa una frecuencia respecto
+    /// a un momento en el tiempo.
+    /// </summary>
     [Serializable()]
     public class FrequencyAndMoment
     {
 
-
+        /// <summary>
+        /// Tipo de frecuencia.
+        /// </summary>
         public FrequencyCode Tp { get; set; }
 
+        /// <summary>
+        /// Punto temporal a partir del cual comienza a contar.
+        /// </summary>
         public string PtInTm { get; set; }
    
     }

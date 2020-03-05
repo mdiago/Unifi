@@ -99,7 +99,9 @@ namespace Unifi.Xml.Pain.CustomerDirectDebitInitiation
         [XmlElement(DataType = "date")]
         public DateTime OrgnlFnlColltnDt { get; set; }
 
-
+        /// <summary>
+        /// True si OrgnlFnlColltnDt especificado.
+        /// </summary>
         [XmlIgnore()]
         public bool OrgnlFnlColltnDtSpecified { get; set; }
 
@@ -110,6 +112,9 @@ namespace Unifi.Xml.Pain.CustomerDirectDebitInitiation
         [XmlElement("OrgnlFrqcy", typeof(FrequencyChoice), Namespace = Namespaces.V08)]
         public virtual object OrgnlFrqcy { get; set; }
 
+        /// <summary>
+        /// True si OrgnlFrqcy especificado.
+        /// </summary>
         [XmlIgnore()]
         public bool OrgnlFrqcySpecified { get; set; }
 

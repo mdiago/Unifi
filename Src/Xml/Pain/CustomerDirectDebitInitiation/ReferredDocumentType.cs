@@ -41,12 +41,21 @@ using System;
 
 namespace Unifi.Xml.Pain.CustomerDirectDebitInitiation
 {
+
+    /// <summary>
+    /// Especifica el tipo de documento referido en la información de envío.
+    /// </summary>
     [Serializable()]
     public class ReferredDocumentType    {
 
-
+        /// <summary>
+        /// Especifica el tipo de documento referido en la información de envío.
+        /// </summary>
         public ReferredDocumentTypeChoice CdOrPrtry { get; set; }
 
+        /// <summary>
+        /// Identificación del emisor del tipo de documento de referencia.
+        /// </summary>
         public string Issr { get; set; }
 
     }

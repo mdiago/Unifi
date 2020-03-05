@@ -43,19 +43,36 @@ using System.Xml.Serialization;
 namespace Unifi.Xml.Pain.CustomerDirectDebitInitiation
 {
 
+    /// <summary>
+    /// PaymentTypeInformation
+    /// </summary>
+
     [Serializable()]
     public class PaymentTypeInformation
     {
+
+        /// <summary>
+        /// Indicador de la urgencia u orden de importancia que la parte
+        /// instructora desea que la parte instruida aplique al procesamiento
+        /// de la instrucción.
+        /// </summary>
         public PriorityCode InstrPrty { get; set; }
 
+        /// <summary>
+        /// True si InstrPrty especificado.
+        /// </summary>
         [XmlIgnore()]
         public bool InstrPrtySpecified { get; set; }
 
         /// <summary>
-        /// Sólo válido en la versión 1.
+        /// Sólo válido en la versión 1. 	
+        /// Especifica el canal de compensación que se utilizará para procesar la instrucción de pago.
         /// </summary>
         public ClearingChannelCode ClrChanl { get; set; }
 
+        /// <summary>
+        /// True si ClrChanl especificado.
+        /// </summary>
         [XmlIgnore()]
         public bool ClrChanlSpecified { get; set; }
 
@@ -72,8 +89,14 @@ namespace Unifi.Xml.Pain.CustomerDirectDebitInitiation
         /// </summary>
         public CdOrPrtryTypeChoice LclInstrm { get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public SequenceTypeCode SeqTp { get; set; }
 
+        /// <summary>
+        /// Identifies the direct debit sequence, such as first, recurrent, final or one-off.
+        /// </summary>
         [XmlIgnore()]
         public bool SeqTpSpecified { get; set; }
 
@@ -87,6 +110,9 @@ namespace Unifi.Xml.Pain.CustomerDirectDebitInitiation
         [XmlElement("CtgyPurp", typeof(CdOrPrtryTypeChoice), Namespace = Namespaces.V02)]
         public virtual object CtgyPurp { get; set; }
 
+        /// <summary>
+        /// True si CtgyPurp especificado.
+        /// </summary>
         [XmlIgnore()]
         public bool CtgyPurpSpecified { get; set; }
 

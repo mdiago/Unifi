@@ -77,8 +77,14 @@ namespace Unifi.Xml.Pain.CustomerDirectDebitInitiationV01
     public class pain00800101
     {
 
+        /// <summary>
+        /// Cabecera del mensaje.
+        /// </summary>
         public GroupHeader GrpHdr { get; set; }
 
+        /// <summary>
+        /// Información del mensaje.
+        /// </summary>
         [XmlElement("PmtInf")]
         public PaymentInstruction[] PmtInf { get; set; }
 

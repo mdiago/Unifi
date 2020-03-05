@@ -49,7 +49,10 @@ namespace Unifi.Xml.Pain.CustomerDirectDebitInitiationV03
     [XmlRoot(Namespace = Namespaces.V03, IsNullable = false)]
     public class Document
     {
-    
+
+        /// <summary>
+        /// Mensaje Direct Debit versión 3.
+        /// </summary>
         public CustomerDirectDebitInitiationV03 CstmrDrctDbtInitn { get; set; }
 
     }

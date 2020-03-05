@@ -49,7 +49,9 @@ namespace Unifi.Xml.Pain.CustomerDirectDebitInitiation
     public class PersonIdentification
     {
 
-
+        /// <summary>
+        /// Identificación de la persona.
+        /// </summary>
         [XmlElement("AlnRegnNb", typeof(string))]
         [XmlElement("CstmrNb", typeof(string))]
         [XmlElement("DrvrsLicNb", typeof(string))]
@@ -62,7 +64,9 @@ namespace Unifi.Xml.Pain.CustomerDirectDebitInitiation
         [XmlChoiceIdentifier("ItemElementName")]
         public object Item { get; set; }
 
-
+        /// <summary>
+        /// Tipo de identificador de la persona.
+        /// </summary>
         [XmlIgnore()]
         public PersonIdentificationType ItemElementName { get; set; }
 

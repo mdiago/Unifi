@@ -50,6 +50,10 @@ namespace Unifi.Xml.Pain.CustomerDirectDebitInitiation
     public class PartyChoice
     {
 
+        /// <summary>
+        /// Identificación de organización o de persona.
+        /// </summary>
+
         [XmlElement("OrgId", typeof(OrganisationIdentification))]
         [XmlElement("PrvtId", typeof(PersonIdentification))]
         public object Item { get; set; }

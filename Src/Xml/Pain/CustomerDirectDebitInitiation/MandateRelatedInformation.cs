@@ -61,6 +61,9 @@ namespace Unifi.Xml.Pain.CustomerDirectDebitInitiation
         [XmlElement(DataType = "date")]
         public DateTime DtOfSgntr { get; set; }
 
+        /// <summary>
+        /// True si DtOfSgntr especificado.
+        /// </summary>
         [XmlIgnore()]
         public bool DtOfSgntrSpecified { get; set; }
 
@@ -69,6 +72,9 @@ namespace Unifi.Xml.Pain.CustomerDirectDebitInitiation
         /// </summary>
         public bool AmdmntInd { get; set; }
 
+        /// <summary>
+        /// True si AmdmntInd especificado.
+        /// </summary>
         [XmlIgnore()]
         public bool AmdmntIndSpecified { get; set; }
 
@@ -88,6 +94,9 @@ namespace Unifi.Xml.Pain.CustomerDirectDebitInitiation
         [XmlElement(DataType = "date")]
         public DateTime FrstColltnDt { get; set; }
 
+        /// <summary>
+        /// True si FrstColltnDt especificado.
+        /// </summary>
         [XmlIgnore()]
         public bool FrstColltnDtSpecified { get; set; }
 
@@ -97,6 +106,9 @@ namespace Unifi.Xml.Pain.CustomerDirectDebitInitiation
         [XmlElement(DataType = "date")]
         public DateTime FnlColltnDt { get; set; }
 
+        /// <summary>
+        /// True si FnlColltnDt especificado.
+        /// </summary>
         [XmlIgnore()]
         public bool FnlColltnDtSpecified { get; set; }
 

@@ -60,7 +60,9 @@ namespace Unifi.Xml.Pain.CustomerDirectDebitInitiationV01
         }
 
 
-
+        /// <summary>
+        /// Mensaje Direct Debit versión 1.
+        /// </summary>
         [XmlElement("pain.008.001.01")]
         public pain00800101 CstmrDrctDbtInitn { get; set; }
 

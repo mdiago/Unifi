@@ -41,12 +41,22 @@ using System;
 
 namespace Unifi.Xml.Pain.CustomerDirectDebitInitiation
 {
+
+    /// <summary>
+    /// Identificación del responsable.
+    /// </summary>
     [Serializable()]
     public class ProxyAccountIdentification
     {
 
+        /// <summary>
+        /// Tipo.
+        /// </summary>
         public CdOrPrtryTypeChoice Tp { get; set; }
 
+        /// <summary>
+        /// Identificador.
+        /// </summary>
         public string Id { get; set; }
 
     }

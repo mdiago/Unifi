@@ -50,7 +50,9 @@ namespace Unifi.Xml.Pain.CustomerDirectDebitInitiationV06
     public class Document
     {
 
-        
+        /// <summary>
+        /// Mensaje Direct Debit versión 6.
+        /// </summary>
         public CustomerDirectDebitInitiationV06 CstmrDrctDbtInitn { get; set; }
 
     }

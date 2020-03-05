@@ -42,20 +42,36 @@ using System.Xml.Serialization;
 namespace Unifi.Xml.Pain.CustomerDirectDebitInitiation
 {
     /// <summary>
-    /// Sólo válido versión 1.
+    /// Sólo válido versión 1. Información sobre el tipo de impuesto..
     /// </summary>
     public class TaxType
     {
 
+        /// <summary>
+        /// Descripción del impuesto que se paga, incluida la
+        /// representación específica requerida por la autoridad fiscal.
+        /// </summary>
         public string CtgyDesc { get; set; }
 
+        /// <summary>
+        /// Tipo impositivo.
+        /// </summary>
         public decimal Rate { get; set; }
 
+        /// <summary>
+        /// True si Rate especificado.
+        /// </summary>
         [XmlIgnore()]
         public bool RateSpecified { get; set; }
 
+        /// <summary>
+        /// Base imponible.
+        /// </summary>
         public ActiveOrHistoricCurrencyAndAmount TaxblBaseAmt { get; set; }
 
+        /// <summary>
+        /// Couta impuesto.
+        /// </summary>
         public ActiveOrHistoricCurrencyAndAmount Amt { get; set; }
 
     }

@@ -77,7 +77,10 @@ namespace Unifi.Xml.Pain.CustomerDirectDebitInitiation
         /// </summary>
         [XmlElement(DataType = "date")]
         public DateTime PreNtfctnDt { get; set; }
-   
+
+        /// <summary>
+        /// True si PreNtfctnDt especificado.
+        /// </summary>
         [XmlIgnore()]
         public bool PreNtfctnDtSpecified { get; set; }
 

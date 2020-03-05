@@ -50,6 +50,9 @@ namespace Unifi.Xml.Pain.CustomerDirectDebitInitiation
     public class ReferredDocumentTypeChoice
     {
 
+        /// <summary>
+        /// Document type in a coded or free form.
+        /// </summary>
         [XmlElement("Cd", typeof(CommercialDocumentTypeCode))]
         [XmlElement("Prtry", typeof(string))]
         public object Item { get; set; }

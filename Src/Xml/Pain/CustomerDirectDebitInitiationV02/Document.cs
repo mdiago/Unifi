@@ -58,6 +58,9 @@ namespace Unifi.Xml.Pain.CustomerDirectDebitInitiationV02
             CstmrDrctDbtInitn = new CustomerDirectDebitInitiationV02();
         }
 
+        /// <summary>
+        /// Mensaje Direct Debit versión 2.
+        /// </summary>
         public CustomerDirectDebitInitiationV02 CstmrDrctDbtInitn { get; set; }
     }
 

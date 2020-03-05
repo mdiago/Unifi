@@ -50,7 +50,9 @@ namespace Unifi.Xml.Pain.CustomerDirectDebitInitiation
     public class AccountIdentificationChoice
     {
 
-
+        /// <summary>
+        /// Cadena de identificación de la cuenta.
+        /// </summary>
         [XmlElement("BBAN", typeof(string))]
         [XmlElement("IBAN", typeof(string))]
         [XmlElement("PrtryAcct", typeof(SimpleIdentificationInformation))]
