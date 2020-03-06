@@ -4,37 +4,56 @@ Biblioteca para trabajar con Universal Financial Industry Message Scheme; Están
 
 La norma ISO 20022 cubre el conjunto de mensajes utilizados en las transacciones relacionadas con la industria financiera. La biblioteca Unifi, pretende cubrir este conjunto de mensajes, sirviendo de apoyo para la serialización xml de los mismos.
 
-## Pagos
+## Mensajes
 
-El panel de Pagos cubre mensajes que comprenden la administración de las cuentas de efectivo, el inicio de pagos, la compensación y liquidación, y la administración de efectivo, etc.
+### acmt - Account Management
 
-### Administración de cuentas (acmt)
+### admi - Administration
 
-### Iniciación de pagos (pain, camt, remt, reda)
+### auth - Authorities
+
+### caaa - Acceptor to Acquirer Card Transactions
+
+### caam - ATM Management
+
+
+### camt - Cash Management
+
+### casp - Sale to POI Card Transactions
+
+### catp - ATM Card Transactions
+
+### colr - Collateral Management
+
+### fxtr - Foreign Exchange Trade
+
+### pacs - Payments Clearing and Settlement
+
+### pain - Payments Initiation
 
 **Creditor Payment Activation**
 
-* [CustomerDirectDebitInitiation](https://github.com/mdiago/Unifi/wiki/001-CustomerDirectDebitInitiation)
+* [CustomerDirectDebitInitiation](001-CustomerDirectDebitInitiation#customerdirectdebitinitiation)
 
-### Compensación y liquidación de pagos (pacs, remt, pacs, camt, reda)
+### reda - Reference Data
 
-### Gestión de efectivo (camt, remt, pacs)
+### remt - Payments Remittance Advice
 
-### Autoridades Comunicaciones (auth)
+### secl - Securities Clearing
 
-## Valores
+### seev - Securities Events
 
-Mensajes que respaldan el pre-comercio, comercio, post-comercio, compensación y liquidación, gestión de valores, gestión de cuentas de valores, conciliación, servicio de activos, gestión de garantías, etc.
+### semt - Securities Management
 
-## Servicios comerciales
+### sese - Securities Settlement
 
-Mensajes que respaldan la adquisición, los productos y servicios de financiación del comercio, pronósticos, conciliación, contabilidad, información de remesas, etc.
+### setr - Securities Trade
 
-## Tarjetas
+### tsin - Trade Services Initiation
 
-Mensajes que respaldan las transacciones con tarjeta entre el aceptante y el adquirente, el adquirente y el emisor, el sistema de venta y el PDI, la administración de terminales, la compensación y liquidación, la recaudación de tarifas, etc.
+### tsmt - Trade Services Management
 
-## FX
+### tsrv - Trade Services
 
-Mensajes que respaldan el pre-comercio, comercio, post-comercio, notificación, compensación y liquidación, informes y conciliación de productos FX
+### head - Business Application Header
 
