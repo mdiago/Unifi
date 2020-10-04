@@ -33,7 +33,7 @@ La norma ISO 20022 cubre el conjunto de mensajes utilizados en las transacciones
 
 **Creditor Payment Activation**
 
-* [CustomerCreditTransferInitiation](https://github.com/mdiago/Unifi/wiki/002-CustomerDirectDebitInitiation#customercredittransferinitiation)
+* [CustomerCreditTransferInitiation](https://github.com/mdiago/Unifi/wiki/002-CustomerCreditTransferInitiation#customercredittransferinitiation)
 
 * [CustomerDirectDebitInitiation](https://github.com/mdiago/Unifi/wiki/001-CustomerDirectDebitInitiation#customerdirectdebitinitiation)
 
