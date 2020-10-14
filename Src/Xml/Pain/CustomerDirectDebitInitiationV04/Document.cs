@@ -38,6 +38,7 @@
  */
 
 using System.Xml.Serialization;
+using Unifi.Xml.Pain.CustomerDirectDebitInitiation;
 
 namespace Unifi.Xml.Pain.CustomerDirectDebitInitiationV04
 {
@@ -45,8 +46,8 @@ namespace Unifi.Xml.Pain.CustomerDirectDebitInitiationV04
     /// <summary>
     /// Representa un documento según ISO 20022 de Direct Debit versión 4.
     /// </summary>
-    [XmlType(Namespace = Namespaces.V04)]
-    [XmlRoot(Namespace = Namespaces.V04, IsNullable = false)]
+    [XmlType(Namespace = Namespaces.CustomerDirectDebitInitiationV04)]
+    [XmlRoot(Namespace = Namespaces.CustomerDirectDebitInitiationV04, IsNullable = false)]
     public class Document
     {
 

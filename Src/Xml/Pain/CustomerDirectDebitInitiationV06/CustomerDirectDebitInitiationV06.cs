@@ -38,6 +38,7 @@
  */
 
 using System.Xml.Serialization;
+using Unifi.Xml.Pain.Common;
 using Unifi.Xml.Pain.CustomerDirectDebitInitiation;
 
 namespace Unifi.Xml.Pain.CustomerDirectDebitInitiationV06

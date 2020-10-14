@@ -39,6 +39,7 @@
 
 using System;
 using System.Xml.Serialization;
+using Unifi.Xml.Pain.Common;
 
 namespace Unifi.Xml.Pain.CustomerDirectDebitInitiation
 {
@@ -48,59 +49,8 @@ namespace Unifi.Xml.Pain.CustomerDirectDebitInitiation
     /// de pago incluidas en el inicio del débito directo.
     /// </summary>
     [Serializable()]
-    public class PaymentInstruction
+    public class PaymentInstruction : PaymentInstructionBase
     {
-
-        /// <summary>
-        /// Identificación única, según lo asignado por una parte que envía,
-        /// para identificar inequívocamente el grupo de información de pago
-        /// dentro del mensaje.
-        /// </summary>
-        public string PmtInfId { get; set; }
-
-        /// <summary>
-        /// Especifica los medios de pago que se utilizarán para mover la
-        /// cantidad de dinero.
-        /// </summary>
-        public PaymentMethodCode PmtMtd { get; set; }
-
-        /// <summary>
-        /// Identifica si se solicita una sola entrada por transacción individual
-        /// o una entrada por lotes para la suma de los importes de todas las transacciones
-        /// dentro del grupo de un mensaje.
-        /// Uso: la reserva de lotes se utiliza para solicitar y no solicitar una posible
-        /// reserva de lotes.
-        /// </summary>
-        public bool BtchBookg { get; set; }
-
-        /// <summary>
-        /// True si BtchBookg especificado.
-        /// </summary>
-        [XmlIgnore()]
-        public bool BtchBookgSpecified { get; set; }
-
-        /// <summary>
-        /// Número de transacciones individuales contenidas en el grupo
-        /// de información de pago.
-        /// </summary>
-        public string NbOfTxs { get; set; }
-
-        /// <summary>
-        /// Total de todas las cantidades individuales incluidas en el grupo,
-        /// independientemente de las monedas.
-        /// </summary>
-        public decimal CtrlSum { get; set; }
-
-        /// <summary>
-        /// True si CtrlSum especificado.
-        /// </summary>
-        [XmlIgnore()]
-        public bool CtrlSumSpecified { get; set; }
-
-        /// <summary>
-        /// Conjunto de elementos utilizados para especificar aún más el tipo de transacción.
-        /// </summary>
-        public PaymentTypeInformation PmtTpInf { get; set; }
 
         /// <summary>
         /// Fecha y hora en que el acreedor solicita que la cantidad de dinero se recaude del deudor.
@@ -176,15 +126,7 @@ namespace Unifi.Xml.Pain.CustomerDirectDebitInitiation
         /// </summary>
         [XmlElement("DrctDbtTxInf")]
         public DirectDebitTransactionInformation[] DrctDbtTxInf { get; set; }
-
-        /// <summary>
-        /// Representación textual de la instancia.
-        /// </summary>
-        /// <returns>Representación textual de la instancia.</returns>
-        public override string ToString()
-        {
-            return $"{PmtInfId}, {PmtMtd}, {PmtTpInf}";
-        }
+    
 
     }
 }

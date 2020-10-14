@@ -39,6 +39,7 @@
 
 using System;
 using System.Xml.Serialization;
+using Unifi.Xml.Pain.Common;
 using Unifi.Xml.Pain.CustomerDirectDebitInitiation;
 
 namespace Unifi.Xml.Pain.CustomerDirectDebitInitiationV08
@@ -49,7 +50,7 @@ namespace Unifi.Xml.Pain.CustomerDirectDebitInitiationV08
     /// El mensaje ISO 20022 de iniciación de adeudos directos básicos por el cliente (pain.008.001.08.
     /// </summary>
     [Serializable()]
-    [XmlType(Namespace = Namespaces.V08)]
+    [XmlType(Namespace = Namespaces.CustomerDirectDebitInitiationV08)]
     public class CustomerDirectDebitInitiationV08
     {
 

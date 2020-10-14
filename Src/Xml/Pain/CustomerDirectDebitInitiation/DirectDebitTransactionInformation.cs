@@ -1,4 +1,5 @@
 ﻿/*
+/*
     This file is part of the Unifi (R) project.
     Copyright (c) 2020 Irene Solutions SL
     Authors: Irene Solutions SL.
@@ -39,6 +40,7 @@
 
 using System;
 using System.Xml.Serialization;
+using Unifi.Xml.Pain.Common;
 
 namespace Unifi.Xml.Pain.CustomerDirectDebitInitiation
 {
@@ -47,46 +49,14 @@ namespace Unifi.Xml.Pain.CustomerDirectDebitInitiation
     /// Proporciona más detalles específicos de las transacciones de débito directo individuales incluidas en el mensaje.
     /// </summary>
     [Serializable()]
-    public class DirectDebitTransactionInformation
+    public class DirectDebitTransactionInformation : PaymentTransactionInformation
     {
 
-        /// <summary>
-        /// Conjunto de elementos utilizados para hacer referencia a una instrucción de pago.
-        /// </summary>
-        public PaymentIdentification PmtId { get; set; }
-
-        /// <summary>
-        /// Conjunto de elementos utilizados para especificar aún más el tipo de transacción.
-        /// </summary>
-        public PaymentTypeInformation PmtTpInf { get; set; }
-
-        /// <summary>
-        /// Cantidad de dinero que se moverá entre el deudor y el acreedor, antes de la
-        /// deducción de los cargos, expresada en la moneda ordenada por la parte iniciadora.
-        /// </summary>
-        public ActiveOrHistoricCurrencyAndAmount InstdAmt { get; set; }
-
-        /// <summary>
-        /// Especifica qué parte / partes asumirán los cargos asociados con el
-        /// procesamiento de la transacción de pago.
-        /// </summary>
-        public ChargeBearerTypeCode ChrgBr { get; set; }
-
-        /// <summary>
-        /// True si ChrgBrSpecified especificado.
-        /// </summary>
-        [XmlIgnore()]
-        public bool ChrgBrSpecified { get; set; }
 
         /// <summary>
         /// Especifica qué parte / partes asumirán los cargos asociados con el procesamiento de la transacción de pago.
         /// </summary>
-        public DirectDebitTransaction DrctDbtTx { get; set; }
-
-        /// <summary>
-        /// Interlocutor final a la que se debe una cantidad de dinero.
-        /// </summary>
-        public PartyIdentification UltmtCdtr { get; set; }
+        public PaymentTransaction DrctDbtTx { get; set; }
 
         /// <summary>
         /// Institución financiera que atiende una cuenta para el deudor.
@@ -109,60 +79,6 @@ namespace Unifi.Xml.Pain.CustomerDirectDebitInitiation
         /// </summary>
         public CashAccount DbtrAcct { get; set; }
 
-        /// <summary>
-        ///  La última parte que le debe una cantidad de dinero al(último) acreedor.
-        /// </summary>
-        public PartyIdentification UltmtDbtr { get; set; }
-
-        /// <summary>
-        /// Información adicional, relacionada con el procesamiento de la instrucción
-        /// de pago, que el agente acreedor deba tener en cuenta, según el acuerdo
-        /// entre el acreedor y el agente acreedor.
-        /// </summary>
-        public string InstrForCdtrAgt { get; set; }
-
-        /// <summary>
-        /// Motivo subyacente de la transacción de pago.
-        /// Uso: El propósito es utilizado por los clientes finales, es decir,
-        /// la parte iniciadora, el deudor (último), el acreedor (último)
-        /// para proporcionar información sobre la naturaleza del pago.
-        /// El propósito es un elemento de contenido, que no es utilizado
-        /// para el procesamiento por ninguno de los agentes involucrados
-        /// en la cadena de pago.
-        /// </summary>
-        public CdOrPrtryTypeChoice Purp { get; set; }
-
-        /// <summary>
-        ///  Información necesaria debido a requisitos reglamentarios y legales.
-        /// </summary>
-        [XmlElement("RgltryRptg")]
-        public RegulatoryReporting[] RgltryRptg { get; set; }
-
-        /// <summary>
-        /// Proporciona detalles sobre el impuesto.
-        /// </summary>
-        public TaxInformation Tax { get; set; }
-
-        /// <summary>
-        /// Proporciona información relacionada con el manejo de la información de remesas
-        /// por parte de cualquiera de los agentes en la cadena de procesamiento de transacciones.
-        /// </summary>
-        [XmlElement("RltdRmtInf")]
-        public RemittanceLocation[] RltdRmtInf { get; set; }
-
-        /// <summary>
-        /// Información suministrada para permitir la correspondencia de una entrada con
-        /// los artículos que la transferencia pretende liquidar, como las facturas comerciales
-        /// en un sistema de cuentas por cobrar.
-        /// </summary>
-        public RemittanceInformation RmtInf { get; set; }
-
-        /// <summary>
-        /// Información adicional que no se puede capturar en los elementos estructurados
-        /// y / o cualquier otro bloque específico.
-        /// </summary>
-        [XmlElement("SplmtryData")]
-        public SupplementaryData[] SplmtryData { get; set; }
 
         /// <summary>
         /// Representación textual de la instancia.

@@ -46,14 +46,29 @@ namespace Unifi.Xml.Pain
     public class Namespaces
     {
 
-        internal const string V01 = "urn:iso:std:iso:20022:tech:xsd:pain.008.001.01";
-        internal const string V02 = "urn:iso:std:iso:20022:tech:xsd:pain.008.001.02";
-        internal const string V03 = "urn:iso:std:iso:20022:tech:xsd:pain.008.001.03";
-        internal const string V04 = "urn:iso:std:iso:20022:tech:xsd:pain.008.001.04";
-        internal const string V05 = "urn:iso:std:iso:20022:tech:xsd:pain.008.001.05";
-        internal const string V06 = "urn:iso:std:iso:20022:tech:xsd:pain.008.001.06";
-        internal const string V07 = "urn:iso:std:iso:20022:tech:xsd:pain.008.001.07";
-        internal const string V08 = "urn:iso:std:iso:20022:tech:xsd:pain.008.001.08";
+        //CustomerCreditTransferInitiation
+        internal const string CustomerCreditTransferInitiationV01 = "urn:iso:std:iso:20022:tech:xsd:pain.001.001.01";
+        internal const string CustomerCreditTransferInitiationV02 = "urn:iso:std:iso:20022:tech:xsd:pain.001.001.02";
+        internal const string CustomerCreditTransferInitiationV03 = "urn:iso:std:iso:20022:tech:xsd:pain.001.001.03";
+        internal const string CustomerCreditTransferInitiationV04 = "urn:iso:std:iso:20022:tech:xsd:pain.001.001.04";
+        internal const string CustomerCreditTransferInitiationV05 = "urn:iso:std:iso:20022:tech:xsd:pain.001.001.05";
+        internal const string CustomerCreditTransferInitiationV06 = "urn:iso:std:iso:20022:tech:xsd:pain.001.001.06";
+        internal const string CustomerCreditTransferInitiationV07 = "urn:iso:std:iso:20022:tech:xsd:pain.001.001.07";
+        internal const string CustomerCreditTransferInitiationV08 = "urn:iso:std:iso:20022:tech:xsd:pain.001.001.08";
+        internal const string CustomerCreditTransferInitiationV09 = "urn:iso:std:iso:20022:tech:xsd:pain.001.001.09";
+        internal const string CustomerCreditTransferInitiationV10 = "urn:iso:std:iso:20022:tech:xsd:pain.001.001.10";
+
+        // CustomerDirectDebitInitiation
+        internal const string CustomerDirectDebitInitiationV01 = "urn:iso:std:iso:20022:tech:xsd:pain.008.001.01";
+        internal const string CustomerDirectDebitInitiationV02 = "urn:iso:std:iso:20022:tech:xsd:pain.008.001.02";
+        internal const string CustomerDirectDebitInitiationV03 = "urn:iso:std:iso:20022:tech:xsd:pain.008.001.03";
+        internal const string CustomerDirectDebitInitiationV04 = "urn:iso:std:iso:20022:tech:xsd:pain.008.001.04";
+        internal const string CustomerDirectDebitInitiationV05 = "urn:iso:std:iso:20022:tech:xsd:pain.008.001.05";
+        internal const string CustomerDirectDebitInitiationV06 = "urn:iso:std:iso:20022:tech:xsd:pain.008.001.06";
+        internal const string CustomerDirectDebitInitiationV07 = "urn:iso:std:iso:20022:tech:xsd:pain.008.001.07";
+        internal const string CustomerDirectDebitInitiationV08 = "urn:iso:std:iso:20022:tech:xsd:pain.008.001.08";
+
+        
 
     }
 }

@@ -40,6 +40,7 @@
 using System;
 using System.Collections.Generic;
 using Unifi.Xml;
+using Unifi.Xml.Pain.Common;
 using Unifi.Xml.Pain.CustomerDirectDebitInitiation;
 
 namespace Unifi.Business.Pain
@@ -186,7 +187,7 @@ namespace Unifi.Business.Pain
                         Ccy = directDebitTransaction.Currency,
                         Value = directDebitTransaction.Amount
                     },
-                    DrctDbtTx = new DirectDebitTransaction()
+                    DrctDbtTx = new PaymentTransaction()
                     {
                         MndtRltdInf = new MandateRelatedInformation()
                         {
