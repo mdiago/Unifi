@@ -78,6 +78,48 @@ namespace Unifi.Xml.Pain.CustomerCreditTransferInitiation
         /// </summary>
         public CashAccount CdtrAcct { get; set; }
 
+        /// <summary>
+        /// Motivo subyacente de la transacción de pago.
+        /// Uso: El propósito es utilizado por los clientes finales, es decir,
+        /// la parte iniciadora, el deudor (último), el acreedor (último)
+        /// para proporcionar información sobre la naturaleza del pago.
+        /// El propósito es un elemento de contenido, que no es utilizado
+        /// para el procesamiento por ninguno de los agentes involucrados
+        /// en la cadena de pago.
+        /// </summary>
+        public CdOrPrtryTypeChoice Purp { get; set; }
+
+        /// <summary>
+        ///  Información necesaria debido a requisitos reglamentarios y legales.
+        /// </summary>
+        [XmlElement("RgltryRptg")]
+        public RegulatoryReporting[] RgltryRptg { get; set; }
+
+        /// <summary>
+        /// Proporciona detalles sobre el impuesto.
+        /// </summary>
+        public TaxInformation Tax { get; set; }
+
+        /// <summary>
+        /// Proporciona información relacionada con el manejo de la información de remesas
+        /// por parte de cualquiera de los agentes en la cadena de procesamiento de transacciones.
+        /// </summary>
+        [XmlElement("RltdRmtInf")]
+        public RemittanceLocation[] RltdRmtInf { get; set; }
+
+        /// <summary>
+        /// Información suministrada para permitir la correspondencia de una entrada con
+        /// los artículos que la transferencia pretende liquidar, como las facturas comerciales
+        /// en un sistema de cuentas por cobrar.
+        /// </summary>
+        public RemittanceInformation RmtInf { get; set; }
+
+        /// <summary>
+        /// Información adicional que no se puede capturar en los elementos estructurados
+        /// y / o cualquier otro bloque específico.
+        /// </summary>
+        [XmlElement("SplmtryData")]
+        public SupplementaryData[] SplmtryData { get; set; }
 
         /// <summary>
         /// Representación textual de la instancia.
