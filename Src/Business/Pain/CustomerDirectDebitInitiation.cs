@@ -51,13 +51,10 @@ namespace Unifi.Business.Pain
     /// </summary>
     public class CustomerDirectDebitInitiation
     {
-
         /// <summary>
         /// Diccionario con los serializadores por versión.
         /// </summary>
-        Dictionary<CustomerDirectDebitInitiationVersions, Func<byte[]>> _Parsers =
-             new Dictionary<CustomerDirectDebitInitiationVersions, Func<byte[]>>();
-       
+        Dictionary<CustomerDirectDebitInitiationVersions, Func<byte[]>> _Parsers = new Dictionary<CustomerDirectDebitInitiationVersions, Func<byte[]>>();       
 
         /// <summary>
         /// Devuelve los datos binarios del xml conformado en arreglo a las
@@ -96,12 +93,41 @@ namespace Unifi.Business.Pain
                 }
             };
 
-            document.CstmrDrctDbtInitn.PmtInf = new PaymentInstruction[1]
+            if (DirectDebitTransactions.Count > 999)
+                throw new Exception("Max DirectDebitTransactions number (1000) exceded.");
+
+            // Agrupamos las transacciones por fecha de cargo/abono.
+            Dictionary<DateTime, List<CustomerDirectDebitInitiationPayment>> paymentsByRequestedExecutionDate = new Dictionary<DateTime, List<CustomerDirectDebitInitiationPayment>>();
+
+            foreach (CustomerDirectDebitInitiationPayment directDebitTransaction in DirectDebitTransactions)
             {
-                new PaymentInstruction()
+                if (!paymentsByRequestedExecutionDate.ContainsKey(directDebitTransaction.RequestedExecutionDate))
+                    paymentsByRequestedExecutionDate.Add(directDebitTransaction.RequestedExecutionDate, new List<CustomerDirectDebitInitiationPayment>());
+
+                paymentsByRequestedExecutionDate[directDebitTransaction.RequestedExecutionDate].Add(directDebitTransaction);
+            }
+
+            int index = -1;
+            int transactionIndex = -1;
+
+            document.CstmrDrctDbtInitn.PmtInf = new PaymentInstruction[paymentsByRequestedExecutionDate.Count];
+
+            foreach (var item in paymentsByRequestedExecutionDate)
+            {
+                DateTime transactionsDate = item.Key;
+                List<CustomerDirectDebitInitiationPayment> transactionsList = item.Value;
+                decimal transactionsSum = 0;
+                foreach (var payment in transactionsList) transactionsSum += payment.Amount;
+
+                // Añadimos la cabecera de cada bloque PaymentInfo (el cual depende de la fecha a la que se realice el cargo/abono).
+
+                document.CstmrDrctDbtInitn.PmtInf[++index] = new PaymentInstruction()
                 {
                     PmtInfId = PaymentInformationIdentification,
                     PmtMtd = PaymentMethodCode.DD,
+                    BtchBookg = true,
+                    NbOfTxs = $"{transactionsList.Count}",
+                    CtrlSum = transactionsSum,
                     PmtTpInf = new PaymentTypeInformation()
                     {
                         SvcLvl = new CdOrPrtryTypeChoice()
@@ -120,7 +146,7 @@ namespace Unifi.Business.Pain
                         },
                         CtgyPurpSpecified = true
                     },
-                    ReqdColltnDt = RequestedExecutionDate, // Fecha de abono
+                    ReqdColltnDt = transactionsDate, // Fecha de abono
                     Cdtr = new PartyIdentification()
                     {
                         Nm = Creditor.Name
@@ -146,11 +172,11 @@ namespace Unifi.Business.Pain
                         {
                             Item = new PersonIdentification()
                             {
-                                    Othr = new GenericIdentificationCdOrPrtry[1]
+                                Othr = new GenericIdentificationCdOrPrtry[1]
                                     {
                                         new GenericIdentificationCdOrPrtry()
                                         {
-                                            Id = Creditor.Identification,                                            
+                                            Id = Creditor.Identification,
                                             SchmeNm = new CdOrPrtryTypeChoice()
                                             {
                                                 Item = Creditor.SchmeNm,
@@ -161,75 +187,70 @@ namespace Unifi.Business.Pain
                             }
                         }
                     },
-                    DrctDbtTxInf = new DirectDebitTransactionInformation[NumberOfTransactions]
-                }
-            };
-
-            int index = 0;
-
-            foreach (var directDebitTransaction in DirectDebitTransactions)
-            {
-
-                if (index > 999)
-                    throw new Exception("Max DirectDebitTransactions number (1000) exceded.");
-
-                directDebitTransaction.PaymentIdentification = $"{MessageIdentification}-" +$"{index + 1}".PadLeft(3, '0');
-
-                document.CstmrDrctDbtInitn.PmtInf[0].DrctDbtTxInf[index++] = new DirectDebitTransactionInformation()
-                {
-                    PmtId = new PaymentIdentification()
-                    {
-                        EndToEndId = directDebitTransaction.PaymentIdentification,
-                        InstrId = directDebitTransaction.PaymentIdentification
-                    },
-                    InstdAmt = new ActiveOrHistoricCurrencyAndAmount()
-                    {
-                        Ccy = directDebitTransaction.Currency,
-                        Value = directDebitTransaction.Amount
-                    },
-                    DrctDbtTx = new PaymentTransaction()
-                    {
-                        MndtRltdInf = new MandateRelatedInformation()
-                        {
-                            MndtId = directDebitTransaction.MandateIdentification,
-                            DtOfSgntr = directDebitTransaction.DateOfSignature,     // Fecha de firma
-                            DtOfSgntrSpecified = true,
-                            AmdmntInd = false,
-                            AmdmntIndSpecified = true
-                        }
-                    },
-                    DbtrAgt = new BranchAndFinancialInstitutionIdentification()
-                    {
-                        FinInstnId = new FinancialInstitutionIdentification()
-                        {
-                            BIC = directDebitTransaction.Debtor.BIC
-                        }
-                    },
-                    Dbtr = new PartyIdentification()
-                    {
-                        Nm = directDebitTransaction.Debtor.Name
-                    },
-                    DbtrAcct = new CashAccount()
-                    {
-                        Id = new AccountIdentificationChoice()
-                        {
-                            Item = directDebitTransaction.Debtor.IBAN,
-                            ItemElementName = AccountIdentificationType.IBAN
-                        }
-                    },
-                    Purp = new CdOrPrtryTypeChoice()
-                    {
-                        Item = directDebitTransaction.Purpose
-                    },
-                    RmtInf = new RemittanceInformation()
-                    {
-                        Ustrd = directDebitTransaction.RemittanceInformation
-                    }
+                    DrctDbtTxInf = new DirectDebitTransactionInformation[transactionsList.Count]
                 };
+
+                // Añadimos las líneas al bloque de PaymentInfo.
+
+                foreach (var directDebitTransaction in transactionsList)
+                {
+                    directDebitTransaction.PaymentIdentification = $"{MessageIdentification}-" + $"{++transactionIndex + 1}".PadLeft(3, '0');
+
+                    document.CstmrDrctDbtInitn.PmtInf[index].DrctDbtTxInf[transactionIndex] = new DirectDebitTransactionInformation()
+                    {
+                        PmtId = new PaymentIdentification()
+                        {
+                            EndToEndId = directDebitTransaction.PaymentIdentification,
+                            InstrId = directDebitTransaction.PaymentIdentification
+                        },
+                        InstdAmt = new ActiveOrHistoricCurrencyAndAmount()
+                        {
+                            Ccy = directDebitTransaction.Currency,
+                            Value = directDebitTransaction.Amount
+                        },
+                        DrctDbtTx = new PaymentTransaction()
+                        {
+                            MndtRltdInf = new MandateRelatedInformation()
+                            {
+                                MndtId = directDebitTransaction.MandateIdentification,
+                                DtOfSgntr = directDebitTransaction.DateOfSignature,     // Fecha de firma
+                                DtOfSgntrSpecified = true,
+                                AmdmntInd = false,
+                                AmdmntIndSpecified = true
+                            }
+                        },
+                        DbtrAgt = new BranchAndFinancialInstitutionIdentification()
+                        {
+                            FinInstnId = new FinancialInstitutionIdentification()
+                            {
+                                BIC = directDebitTransaction.Debtor.BIC
+                            }
+                        },
+                        Dbtr = new PartyIdentification()
+                        {
+                            Nm = directDebitTransaction.Debtor.Name
+                        },
+                        DbtrAcct = new CashAccount()
+                        {
+                            Id = new AccountIdentificationChoice()
+                            {
+                                Item = directDebitTransaction.Debtor.IBAN,
+                                ItemElementName = AccountIdentificationType.IBAN
+                            }
+                        },
+                        Purp = new CdOrPrtryTypeChoice()
+                        {
+                            Item = directDebitTransaction.Purpose
+                        },
+                        RmtInf = new RemittanceInformation()
+                        {
+                            Ustrd = directDebitTransaction.RemittanceInformation
+                        }
+                    };
+                }
             }
 
             return XmlParser<Xml.Pain.CustomerDirectDebitInitiationV02.Document>.ToXml(document);
-
         }
 
         /// <summary>
@@ -275,7 +296,6 @@ namespace Unifi.Business.Pain
         {
             get
             {
-
                 decimal sum = 0;
 
                 if (DirectDebitTransactions == null)
@@ -285,11 +305,8 @@ namespace Unifi.Business.Pain
                     sum += directDebitTransaction.Amount;
 
                 return sum;
-
-
             }
         }
-
 
         /// <summary>
         /// Acuerdo bajo el cual o reglas bajo las cuales la transacción debe ser procesada.
@@ -351,13 +368,10 @@ namespace Unifi.Business.Pain
         /// <returns>Archivo xml correspondiente</returns>
         public byte[] GetXml(CustomerDirectDebitInitiationVersions version = CustomerDirectDebitInitiationVersions.V02) 
         {
-
             if (!_Parsers.ContainsKey(version))
                 throw new NotImplementedException($"Version {version} not implemented.");
 
             return _Parsers[version]();
-
         }
-
     }
 }

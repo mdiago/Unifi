@@ -41,14 +41,12 @@ using System;
 
 namespace Unifi.Business.Pain
 {
-
     /// <summary>
     /// Representa un pago integrado en un mensaje 
     /// del tipo CustomerDirectDebitInitiation.
     /// </summary>
     public class CustomerDirectDebitInitiationPayment
     {
-
         /// <summary>
         /// Conjunto de elementos utilizados para hacer referencia a una instrucción de pago.
         /// </summary>
@@ -97,17 +95,20 @@ namespace Unifi.Business.Pain
         /// </summary>
         public string[] RemittanceInformation { get; set; }
 
+        /// <summary>
+        /// Fecha y hora en que el acreedor solicita que la cantidad de dinero se recaude del deudor.
+        /// Fecha en que la parte iniciadora solicita al agente de compensación que procese el pago.
+        /// Uso: Esta es la fecha en que se debitará la cuenta del deudor. Si pago con cheque, la
+        /// fecha en que el banco debe generar el cheque.
+        /// </summary>
+        public DateTime RequestedExecutionDate { get; set; }
 
         /// <summary>
         /// Constructor.
         /// </summary>
         public CustomerDirectDebitInitiationPayment() 
         {
-
             Purpose = "CASH";
-
         }
-
     }
-
 }
