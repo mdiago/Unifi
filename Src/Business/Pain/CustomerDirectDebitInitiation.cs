@@ -248,6 +248,8 @@ namespace Unifi.Business.Pain
                         }
                     };
                 }
+
+                transactionIndex = -1;
             }
 
             return XmlParser<Xml.Pain.CustomerDirectDebitInitiationV02.Document>.ToXml(document);
