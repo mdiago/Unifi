@@ -137,11 +137,19 @@ namespace Unifi.Business.Pain
                 }
             };
 
+            if (CategoryPurpose != null)
+            {
+                document.CstmrCdtTrfInitn.PmtInf[0].PmtTpInf.CtgyPurp = new CdOrPrtryTypeChoice()
+                {
+                    Item = CategoryPurpose
+                };
+                document.CstmrCdtTrfInitn.PmtInf[0].PmtTpInf.CtgyPurpSpecified = true;
+            }
+
             int index = 0;
 
             foreach (var creditTransferTransaction in CreditTransferTransactions)
             {
-
                 if (index > 999)
                     throw new Exception("Max CreditTransferTransactions number (1000) exceded.");
 
@@ -184,8 +192,16 @@ namespace Unifi.Business.Pain
                     RmtInf = new RemittanceInformation()
                     {
                         Ustrd = creditTransferTransaction.RemittanceInformation
-                    }
+                    },
                 };
+
+                if (CategoryPurpose != null)
+                {
+                    document.CstmrCdtTrfInitn.PmtInf[0].CdtTrfTxInf[index - 1].Purp = new CdOrPrtryTypeChoice()
+                    {
+                        Item = CategoryPurpose
+                    };
+                }
             }
 
             return XmlParser<Xml.Pain.CustomerCreditTransferInitiationV03.Document>.ToXml(document);
@@ -298,7 +314,7 @@ namespace Unifi.Business.Pain
 
             ServiceLevel = "SEPA";
             LocalInstrument = "COR1";
-            CategoryPurpose = "CASH";
+            // CategoryPurpose = "CASH";
 
             _Parsers[CustomerCreditTransferInitiationVersions.V03] = GetXmlV03;           
 
