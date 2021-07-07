@@ -107,7 +107,7 @@ namespace Unifi.Xml.Pain.Common
         /// Es probable que desencadene un procesamiento especial por parte de cualquiera de los agentes involucrados
         /// en la cadena de pago.
         /// </summary>
-        [XmlElement("CtgyPurp", typeof(PaymentCategoryPurposeCode))]
+        [XmlElement("CtgyPurp", typeof(PaymentCategoryPurposeCode), Namespace = Namespaces.CustomerDirectDebitInitiationV01)]
         [XmlElement("CtgyPurp", typeof(CdOrPrtryTypeChoice))]
         public virtual object CtgyPurp { get; set; }
 
