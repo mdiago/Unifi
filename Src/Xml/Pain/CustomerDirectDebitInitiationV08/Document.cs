@@ -51,7 +51,15 @@ namespace Unifi.Xml.Pain.CustomerDirectDebitInitiationV08
     [XmlType(Namespace = Namespaces.CustomerDirectDebitInitiationV08)]
     [XmlRoot(Namespace = Namespaces.CustomerDirectDebitInitiationV08, IsNullable = false)]
     public class Document
-    {        
+    {
+
+        /// <summary>
+        /// Constructor.
+        /// </summary>
+        public Document()
+        {
+            CstmrDrctDbtInitn = new CustomerDirectDebitInitiationV08();
+        }
 
         /// <summary>
         /// <para>MENSAJE DE INICIACIÓN DE ADEUDOS DIRECTOS.</para>
